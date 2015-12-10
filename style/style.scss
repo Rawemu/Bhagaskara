@@ -34,12 +34,36 @@ ul{
 }
 
 header{
+  background: grey;
+  background-image: url("../img/header_bg.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
   h1, h2, p, li{
     text-align: center;
+  }
+  li{
+    text-align: center;
+    padding: 4% 0;
+    background-image: url("../img/sextagon.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    .cont {
+      max-width: 40px;
+      max-height: 80px;
+      margin: 0 auto;
+    }
+    img{
+      margin: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    &:hover{
+      background-image: url("../img/sextagon_purple.png");
+    }
   }
   .uppedLi{
   }
   .loweredLi{
-    margin-top: 4em;
+    margin-top: 20%;
   }
 }

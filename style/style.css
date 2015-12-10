@@ -84,9 +84,37 @@ ul {
   list-style-type: none;
 }
 
+header {
+  background: grey;
+  background-image: url("../img/header_bg.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
 header h1, header h2, header p, header li {
   text-align: center;
 }
-header .loweredLi {
-  margin-top: 4em;
+header li {
+  text-align: center;
+  padding: 4% 0;
+  background-image: url("../img/sextagon.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
+header li .cont {
+  max-width: 40px;
+  max-height: 80px;
+  margin: 0 auto;
+}
+header li img {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+header li:hover {
+  background-image: url("../img/sextagon_purple.png");
+}
+header .loweredLi {
+  margin-top: 20%;
+}
+
+/*# sourceMappingURL=style.css.map */
