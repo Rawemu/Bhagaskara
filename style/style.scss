@@ -1,10 +1,23 @@
+%testBorder{
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
 .row{
   width: 100%;
+  &:before,
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @for $i from 1 through 12{
   .col-#{$i}{
     width: 100%/12 * $i;
+    float: left;
+    @extend %testBorder;
   }
 }
 
@@ -12,4 +25,21 @@
   width: 90%;
   max-width: 1180px;
   margin: 0 auto;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header{
+  h1, h2, p, li{
+    text-align: center;
+  }
+  .uppedLi{
+  }
+  .loweredLi{
+    margin-top: 4em;
+  }
 }

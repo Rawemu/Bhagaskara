@@ -1,57 +1,92 @@
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
 .row {
   width: 100%;
+}
+.row:before, .row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .col-1 {
   width: 8.33333%;
+  float: left;
 }
 
 .col-2 {
   width: 16.66667%;
+  float: left;
 }
 
 .col-3 {
   width: 25%;
+  float: left;
 }
 
 .col-4 {
   width: 33.33333%;
+  float: left;
 }
 
 .col-5 {
   width: 41.66667%;
+  float: left;
 }
 
 .col-6 {
   width: 50%;
+  float: left;
 }
 
 .col-7 {
   width: 58.33333%;
+  float: left;
 }
 
 .col-8 {
   width: 66.66667%;
+  float: left;
 }
 
 .col-9 {
   width: 75%;
+  float: left;
 }
 
 .col-10 {
   width: 83.33333%;
+  float: left;
 }
 
 .col-11 {
   width: 91.66667%;
+  float: left;
 }
 
 .col-12 {
   width: 100%;
+  float: left;
 }
 
 .container {
   width: 90%;
   max-width: 1180px;
   margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header h1, header h2, header p, header li {
+  text-align: center;
+}
+header .loweredLi {
+  margin-top: 4em;
 }
