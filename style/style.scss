@@ -41,7 +41,7 @@ a{
       width: 100%/$end * $i;
       float: left;
       box-sizing: border-box;
-      border: 1px solid red;
+      border: 1px solid transparent;
     }
   }
 }
@@ -66,6 +66,28 @@ a{
 
 .marginSetter{
   padding: 5% 0;
+}
+
+.headers{
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+  .headersText {
+    span {
+      color: purple;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      margin-left: 15%;
+      margin-top: -20px;
+      border-top: 2px solid purple;
+      border-right: 2px solid purple;
+    }
+  }
 }
 
 header{
@@ -191,19 +213,40 @@ header{
       background-repeat: no-repeat;
       padding: 20% 0;
     }
+
+    p{
+      padding: 5px;
+    }
   }
 }
 
 .about{
-  h1{
-    span{
-      color: purple;
+  .screensPic{
+    img{
+      max-width: 100%;
+      height: auto;
     }
   }
+  .besidePic {
+    padding: 5px;
 
-  .screensPic{
-    background-image: url("../img/screens.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    p {
+      padding: 5px;
+      line-height: 2em;
+    }
+
+    .learnMoreButton {
+      max-width: 150px;
+      margin-left: 2%;
+      padding: 5%;
+      display: block;
+      font-weight: 800;
+      text-align: center;
+      color: white;
+      background: purple;
+      box-shadow: 0 5px #600060;
+      border-radius: 5%;
+
+    }
   }
 }
