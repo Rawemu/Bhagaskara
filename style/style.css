@@ -46,84 +46,84 @@ a {
     width: 8.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-2 {
     width: 16.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-3 {
     width: 25%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-4 {
     width: 33.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-5 {
     width: 41.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-6 {
     width: 50%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-7 {
     width: 58.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-8 {
     width: 66.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-9 {
     width: 75%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-10 {
     width: 83.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-11 {
     width: 91.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-12 {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 }
 @media only screen and (max-width: 899px) {
@@ -425,4 +425,23 @@ header .slideDownButton:hover img {
   font-size: 4em;
   font-weight: 700;
   margin: 0;
+}
+#services .servicesStats .statsDescription {
+  font-size: 1em;
+}
+
+#citationsSlider {
+  text-align: center;
+}
+#citationsSlider .citationAuthorPic {
+  background: grey;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#citationsSlider .citation span {
+  max-width: 500px;
+}
+#citationsSlider .citationAuthor {
+  text-transform: uppercase;
 }
