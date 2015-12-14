@@ -192,7 +192,17 @@ a {
   position: absolute;
   height: 20px;
   width: 20px;
-  margin-left: 15%;
+  margin-left: -40px;
+  margin-top: 40px;
+  border-bottom: 2px solid purple;
+  border-left: 2px solid purple;
+}
+.headers .headersText:after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
   margin-top: -20px;
   border-top: 2px solid purple;
   border-right: 2px solid purple;
@@ -207,6 +217,11 @@ header {
 header h1, header h2, header p, header li {
   text-align: center;
   color: white;
+}
+header a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 header h1 {
   max-width: 400px;
@@ -223,6 +238,8 @@ header li {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 header li img {
   margin: 0 auto;
@@ -307,18 +324,18 @@ header .slideDownButton:hover img {
   padding: 5px;
 }
 
-.about .screensPic img {
+#about .screensPic img {
   max-width: 100%;
   height: auto;
 }
-.about .besidePic {
+#about .besidePic {
   padding: 5px;
 }
-.about .besidePic p {
+#about .besidePic p {
   padding: 5px;
   line-height: 2em;
 }
-.about .besidePic .learnMoreButton {
+#about .besidePic .learnMoreButton {
   max-width: 150px;
   margin-left: 2%;
   padding: 5%;
@@ -329,4 +346,83 @@ header .slideDownButton:hover img {
   background: purple;
   box-shadow: 0 5px #600060;
   border-radius: 5%;
+}
+
+.intersection {
+  background-image: url("../img/middle_bg.jpg");
+  background-position: center;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  text-align: center;
+}
+.intersection .intersectionImage {
+  background-image: url("../img/hexagon.png");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  padding: 5%;
+}
+
+.textOn2ndBackground {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+
+#team .teamButtons #teamButtonLeft,
+#team .teamButtons #teamButtonRight {
+  width: 50%;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/hexagon_small.png");
+}
+#team .teamButtons #teamButtonLeft {
+  text-align: right;
+}
+#team .teamButtons #teamButtonRight {
+  text-align: left;
+}
+#team .teamButtons #teamButtonRight img {
+  transform: rotate(180deg);
+}
+#team .membersList {
+  text-align: center;
+}
+#team .membersList .member div {
+  background: grey;
+  margin: 15% 25%;
+  width: 50%;
+  height: 150px;
+  border-radius: 50%;
+}
+#team .membersList .member .memberName {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#skills .skillsList {
+  margin: 5% 0;
+}
+#skills .skillsList .skill {
+  padding: 5%;
+}
+#skills .skillsList .skill h2 {
+  text-transform: uppercase;
+}
+#skills .skillsList .skill span {
+  float: right;
+}
+#skills .skillsList .skill .skillMeter {
+  height: 10px;
+  background: lightgrey;
+}
+
+#services .servicesStats {
+  text-align: center;
+}
+#services .servicesStats .statsValue {
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0;
 }

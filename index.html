@@ -16,17 +16,17 @@
         </div>
         <div class="col-6 col-12">
             <ul>
-                <li class="col-2 loweredLi"><img src="img/gear.png"/></li>
-                <li class="col-2 loweredLi"><img src="img/user.png"/></li>
-                <li class="col-2 uppedLi"><img src="img/bubble.png"/></li>
+                <li class="col-2 loweredLi"><a href="#about"><img src="img/gear.png"/></a></li>
+                <li class="col-2 loweredLi"><a href="#team"><img src="img/user.png"/></a></li>
+                <li class="col-2 uppedLi"><a href="#preServicesText"><img src="img/bubble.png"/></a></li>
                 <li class="col-2 uppedLi"><img src="img/photo.png"/></li>
                 <!--<li class="col-2 loweredLi"><img src="img/bubble.png"/></li>-->
                 <!--<li class="col-2 loweredLi"><img src="img/photo.png"/></li>-->
-                <li class="col-2 loweredLi"><img src="img/pen.png"/>    </li>
+                <li class="col-2 loweredLi"><img src="img/pen.png"/></li>
                 <li class="col-2 loweredLi"><img src="img/paperplane.png"/></li>
             </ul>
         </div>
-        <div class="col-6 col-12"><a href="#menu"><div class="slideDownButton"><img src="img/arrow_down.png"></div></a></div>
+        <div class="col-6 col-12"><div class="slideDownButton"><a href="#menu"><img src="img/arrow_down.png"></a></div></div>
     </div>
 </header>
 
@@ -37,9 +37,9 @@
             <li class="col-1"><a href="#">contact</a></li>
             <li class="col-1"><a href="#">blog</a></li>
             <li class="col-1"><a href="#">portfolio</a></li>
-            <li class="col-1"><a href="#">services</a></li>
-            <li class="col-1"><a href="#">team</a></li>
-            <li class="col-1"><a href="#"><span>about</span></a></li>
+            <li class="col-1"><a href="#preServicesText">services</a></li>
+            <li class="col-1"><a href="#team">team</a></li>
+            <li class="col-1"><a href="#about"><span>about</span></a></li>
             <li class="col-1"><a href="#">home</a></li>
         </ul>
     </div>
@@ -47,7 +47,7 @@
 
 <section class="row underMenu marginSetter">
     <div class="container">
-        <ul class="features col-12">
+        <ul class="features col-6 col-12">
             <li class="col-3"><article>
                 <div><img src="img/heart.png"/></div>
                 <h1>Build with love</h1>
@@ -72,10 +72,10 @@
     </div>
 </section>
 
-<section class="row about marginSetter">
+<section class="row marginSetter" id="about">
     <article class="container">
-        <h1 class="headers"><span class="headersText">About <span>us</span></span></h1>
-        <div class="col-12">
+        <h1 class="headers col-6 col-12"><span class="headersText">About <span>us</span></span></h1>
+        <div class="col-6 col-12">
             <div class="col-6 screensPic"><img src="img/screens.png"></div>
             <div class="col-6 besidePic">
                 <p>Dico phaedrum in pri. Ex graecis posidonium vis, percipit omittantur et eam, ei eam habeo placerat apeirian. Vel cu putant feugait. Mea te quod mnesarchum repudiandae, quo id elit graeco. Iusto aliquid liberavisse ne sit, sea epicurei convenire cu. Ullum facilis suscipiantur mei no, eu dico magna has. Ne sea cibo homero causae, duo ut legendos maluisset dissentias. Ad paulo ceteros pri. Insolens reformidans vix id, ex alia gubergren usu, debitis consulatu deterruisset his eu.</p>
@@ -85,47 +85,66 @@
     </article>
 </section>
 
-<div class="row">
-    <div></div>
-    <h1></h1>
+<div class="row intersection marginSetter">
+    <div class="container">
+        <div class="col-6 col-12 intersectionImage"><img src="img/study.png"/></div>
+        <h1 class="col-6 col-12 textOn2ndBackground">We lorem ipsum your aliquam</h1>
+    </div>
 </div>
-<section class="row">
-    <h1></h1>
-    <div></div>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+
+<section class="row marginSetter" id="team">
+    <div class="container">
+        <h1 class="col-6 col-12 headers"><span class="headersText">Our <span>team</span></span></h1>
+        <div class="col-6 col-12">
+            <ul class="col-6 col-12 teamButtons">
+                <li class="col-6" id="teamButtonLeft"><img src="img/arrow_purple.png"></li>
+                <li class="col-6" id="teamButtonRight"><img src="img/arrow_purple.png"></li>
+            </ul>
+        </div>
+        <ul class="col-12 membersList">
+            <li class="col-4 member"><div></div><p class="memberName">Name Lastname</p><p>CEO</p></li>
+            <li class="col-4 member"><div></div><p class="memberName">Name Lastname</p><p>Board member</p></li>
+            <li class="col-4 member"><div></div><p class="memberName">Name Lastname</p><p>Board member</p></li>
+        </ul>
+    </div>
 </section>
-<section class="row">
-    <h1></h1>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+
+<section class="row marginSetter" id="skills">
+    <div class="container">
+        <h1 class="col-6 col-12 headers"><span class="headersText">Our <span>skills</span></span></h1>
+        <ul class="col-6 col-12 skillsList">
+            <li class="col-6 skill"><h2>Web design<span>90%</span><h2></h2><div class="skillMeter"></div></li>
+            <li class="col-6 skill"><h2>Graphic design<span>90%</span></h2><div class="skillMeter"></div></li>
+            <li class="col-6 skill"><h2>html/css<span>90%</span></h2><div class="skillMeter"></div></li>
+            <li class="col-6 skill"><h2>ui/ux<span>90%</span></h2><div class="skillMeter"></div></li>
+        </ul>
+    </div>
 </section>
-<div class="row">
-    <div></div>
-    <h1></h1>
+
+<div class="row intersection marginSetter" id="preServicesText">
+    <div class="container">
+        <div class="col-6 col-12 intersectionImage"><img src="img/bubble.png"/></div>
+        <h1 class="col-6 col-12 textOn2ndBackground">Our services will lorem ipsum your aliquam</h1>
+    </div>
 </div>
-<section class="row">
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+
+<section class="row marginSetter" id="services">
+    <div class="container">
+        <ul class="servicesStats col-6 col-12">
+            <li class="col-3"><p class="statsValue">365</p><p class="statsDescription">lorem ipsum</p></li>
+            <li class="col-3"><p class="statsValue">98%</p><p class="statsDescription">lorem ipsum</p></li>
+            <li class="col-3"><p class="statsValue">69</p><p class="statsDescription">lorem ipsum</p></li>
+            <li class="col-3"><p class="statsValue">1,642</p class="statsDescription"><p>lorem ipsum</p></li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </section>
 <section class="row">
     <h1></h1>
