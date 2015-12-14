@@ -391,3 +391,16 @@ header{
     text-transform: uppercase;
   }
 }
+
+.portfolioButtons{
+  padding: 0 36%;
+  li{
+    padding: 2%;
+    margin: 5% 3%;
+    float: left;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid purple;
+  }
+}
