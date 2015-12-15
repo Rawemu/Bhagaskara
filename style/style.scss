@@ -1,4 +1,4 @@
-@-webkit-keyframes blinking {
+@keyframes blinking {
   0% { opacity: 1; }
   50% { opacity: 0;}
   100% { opacity: 1;}
@@ -42,7 +42,7 @@ a{
       width: 100%/$end * $i;
       float: left;
       box-sizing: border-box;
-      border: 1px solid red;
+      border: 1px solid transparent;
     }
   }
 }
@@ -73,6 +73,7 @@ a{
   font-size: 2em;
   text-align: center;
   position: relative;
+  z-index: 1;
   .headersText {
     span {
       color: purple;
@@ -181,17 +182,24 @@ header{
 
     &:hover{
       img {
-        -webkit-animation-name: blinking;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-iteration-count: infinite;
+        animation-name: blinking;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
       }
     }
   }
 }
 
 #menu {
-  background: grey;
-  color: white;
+  background: white;
+  color: darkgray;
+  font-weight: 700;
+  z-index: 5;
+
+  h1{
+    font-size: 1em;
+    line-height: 1em;
+  }
 
   .logoMenu {
     text-align: center;
@@ -202,14 +210,14 @@ header{
   }
 
   .innerMenu {
-    margin: auto;
     li {
       display: block;
       float: right;
-      line-height: 2em;
+      font-size: 0.7em;
+      line-height: 3em;
       text-align: center;
       text-transform: uppercase;
-      margin: 1em 3px;
+      margin: 1em 5px;
       span {
         color: purple;
       }
@@ -221,6 +229,8 @@ header{
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
+  opacity: 0.8;
 }
 
 
@@ -232,7 +242,7 @@ header{
   li{
     text-align: center;
     div {
-      background-image: url("../img/hexagon.png");
+      background-image: url("../img/hexagon_grey.png");
       background-position: center;
       background-size: auto 100%;
       background-repeat: no-repeat;
@@ -400,10 +410,10 @@ header{
 }
 
 .portfolioButtons{
-  padding: 0 36%;
+  padding: 0 32%;
   li {
     padding: 2%;
-    margin: 5% 3%;
+    margin: 5% 2%;
     float: left;
     width: 40px;
     height: 20px;

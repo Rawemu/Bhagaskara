@@ -6,12 +6,19 @@ $(document).ready(function(){
     var menu = $("#menu");
     var menuOffsetFromTop = menu.position().top;
 
-    $(window).on("scroll", function(){
-        if($(window).scrollTop() > menuOffsetFromTop){
-            menu.addClass("sticky");
-        }
-        else{
-            menu.removeClass("sticky");
-        }
-    });
+    function stickyMenu() {
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop() > 1.05 * menuOffsetFromTop) {
+                menu.addClass("sticky");
+                menu.slideDown(1000);
+            }
+            else{
+                menu.removeClass("sticky");
+            }
+        });
+    }
+
+
+
+    stickyMenu();
 });
