@@ -394,7 +394,7 @@ header{
 
 .portfolioButtons{
   padding: 0 36%;
-  li{
+  li {
     padding: 2%;
     margin: 5% 3%;
     float: left;
@@ -402,5 +402,11 @@ header{
     height: 20px;
     text-align: center;
     border: 1px solid purple;
+
+    &:hover {
+      background: purple;
+      color: white;
+      cursor: pointer;
+    }
   }
 }

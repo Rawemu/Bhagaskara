@@ -458,3 +458,8 @@ header .slideDownButton:hover img {
   text-align: center;
   border: 1px solid purple;
 }
+.portfolioButtons li:hover {
+  background: purple;
+  color: white;
+  cursor: pointer;
+}
