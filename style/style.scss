@@ -189,7 +189,7 @@ header{
   }
 }
 
-#menu{
+#menu {
   background: grey;
   color: white;
 
@@ -201,21 +201,28 @@ header{
     }
   }
 
-  .innerMenu{
+  .innerMenu {
     margin: auto;
-    li{
+    li {
       display: block;
       float: right;
       line-height: 2em;
       text-align: center;
       text-transform: uppercase;
       margin: 1em 3px;
-      span{
+      span {
         color: purple;
       }
     }
   }
 }
+
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 
 .underMenu{
   background: #e3e3e3;

@@ -306,6 +306,12 @@ header .slideDownButton:hover img {
   color: purple;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .underMenu {
   background: #e3e3e3;
 }
