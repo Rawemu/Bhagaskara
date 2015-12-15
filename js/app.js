@@ -3,16 +3,19 @@
  */
 
 $(document).ready(function(){
-    var menu = $("#menu");
-    var menuOffsetFromTop = menu.position().top;
 
     function stickyMenu() {
+        var stickyStarts = false;
+        var menu = $("#menu");
+        var menuOffsetFromTop = menu.position().top;
+
         $(window).on("scroll", function () {
             if ($(window).scrollTop() > 1.05 * menuOffsetFromTop) {
                 menu.addClass("sticky");
                 menu.slideDown(1000);
             }
             else{
+                menu.css("display","");
                 menu.removeClass("sticky");
             }
         });
