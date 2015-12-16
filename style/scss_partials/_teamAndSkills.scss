@@ -42,13 +42,17 @@
   .membersList{
     text-align: center;
     overflow: hidden;
-    max-height: 21em;
     white-space: nowrap;
     .member{
       position: relative;
       display: inline-block;
       float: none;
-      right: 33.33%;
+      @media only screen and (min-width: 900px) {
+        right: 33.33%;
+      }
+      @media only screen and (max-width: 899px){
+        right: 100%;
+      }
       div{
         background: grey;
         margin: 15% 25% ;

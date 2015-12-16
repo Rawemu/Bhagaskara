@@ -59,12 +59,18 @@ $(document).ready(function(){
         var animationOffsetRight = { right: "66.67%"};
         var animationOffsetLeft = { right: "0"};
         var numberOfElements = membersList.children().length;
+        var sliderReset = "33.33%";
         var animationTime = 200;
+        var winSize = $(window).width();
 
         rightButton.on("click", function(){
             for(var i = 0; i < numberOfElements; i++){
-                membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(i){
-                    membersList.children().css("right","33.33%");
+                if(winSize < 900){
+                    animationOffsetRight = { right: "200%"};
+                    sliderReset = "100%"
+                }
+                membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(){
+                    membersList.children().css("right", sliderReset);
                 });
             }
             membersList.children().promise().done(function(){
@@ -74,8 +80,12 @@ $(document).ready(function(){
 
         leftButton.on("click", function(){
             for(var i = 0; i < numberOfElements; i++){
+                if(winSize < 900){
+                    animationOffsetRight = { right: "0%"};
+                    sliderReset = "100%"
+                }
                 membersList.children().eq(i).animate(animationOffsetLeft, animationTime, function(){
-                    membersList.children().css("right","33.33%");
+                    membersList.children().css("right", sliderReset);
                 });
             }
             membersList.children().promise().done(function() {
