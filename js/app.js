@@ -67,24 +67,14 @@ $(document).ready(function(){
             currentMember.prev().toggleClass("hidden");
             membersList.children().first().appendTo(membersList);
             currentMember = currentMember.next();
-            if(currentMember.next().length !== 0) {
-                currentMember.next().toggleClass("hidden");
-            }
-            else{
-                membersList.children().eq(0).toggleClass("hidden");
-            }
+            currentMember.next().toggleClass("hidden");
         });
 
         leftButton.on("click", function(){
             currentMember.next().toggleClass("hidden");
             membersList.children().last().prependTo(membersList);
             currentMember = currentMember.prev();
-            if(currentMember.prev().length !== 0) {
-                currentMember.prev().toggleClass("hidden");
-            }
-            else{
-                membersList.children().eq(0).toggleClass("hidden");
-            }
+            currentMember.prev().toggleClass("hidden");
         });
     }
 
