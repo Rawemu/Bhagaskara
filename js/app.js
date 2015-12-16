@@ -61,12 +61,16 @@ $(document).ready(function(){
         var rightButton = $("#teamButtonRight");
         var membersList = $(".membersList").eq(0);
         var currentMember = membersList.children().eq(1);
+        var animationOffset = { right: "33%"};
         var numberOfElements = membersList.children().length;
 
         rightButton.on("click", function(){
-            currentMember.prev().toggleClass("hidden");
-            membersList.children().first().appendTo(membersList);
+            for(var i = 0; i < numberOfElements; i++){
+                membersList.children().eq(i).animate(animationOffset);
+            }
+            //membersList.children().first().appendTo(membersList);
             currentMember = currentMember.next();
+            currentMember.animate(animationOffset);
             currentMember.next().toggleClass("hidden");
         });
 

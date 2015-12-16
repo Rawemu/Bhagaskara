@@ -41,8 +41,11 @@
 
   .membersList{
     text-align: center;
+    overflow: hidden;
+    max-height: 21em;
+    white-space: nowrap;
     .member{
-
+      position: relative;
       div{
         background: grey;
         margin: 15% 25% ;

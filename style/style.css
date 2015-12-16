@@ -406,6 +406,12 @@ header .slideDownButton:hover img {
 }
 #team .membersList {
   text-align: center;
+  overflow: hidden;
+  max-height: 21em;
+  white-space: nowrap;
+}
+#team .membersList .member {
+  position: relative;
 }
 #team .membersList .member div {
   background: grey;
