@@ -1,7 +1,3 @@
-/**
- * Created by coderslab on 15.12.15.
- */
-
 $(document).ready(function(){
 
     stickyMenuWithSlideDownEffect();
@@ -60,25 +56,27 @@ $(document).ready(function(){
         var leftButton = $("#teamButtonLeft");
         var rightButton = $("#teamButtonRight");
         var membersList = $(".membersList").eq(0);
-        var currentMember = membersList.children().eq(1);
-        var animationOffset = { right: "33%"};
+        var animationOffsetRight = { right: "33.33%"};
+        var animationOffsetLeft = { right: "-33.33%"};
         var numberOfElements = membersList.children().length;
+        var animationTime = 200;
 
         rightButton.on("click", function(){
+            membersList.children().first().appendTo(membersList);
             for(var i = 0; i < numberOfElements; i++){
-                membersList.children().eq(i).animate(animationOffset);
+                membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(){
+                    membersList.children().css("right","0");
+                });
             }
-            //membersList.children().first().appendTo(membersList);
-            currentMember = currentMember.next();
-            currentMember.animate(animationOffset);
-            currentMember.next().toggleClass("hidden");
         });
 
         leftButton.on("click", function(){
-            currentMember.next().toggleClass("hidden");
             membersList.children().last().prependTo(membersList);
-            currentMember = currentMember.prev();
-            currentMember.prev().toggleClass("hidden");
+            for(var i = 0; i < numberOfElements; i++){
+                membersList.children().eq(i).animate(animationOffsetLeft, animationTime, function(){
+                    membersList.children().css("right","0");
+                });
+            }
         });
     }
 

@@ -46,6 +46,8 @@
     white-space: nowrap;
     .member{
       position: relative;
+      display: inline-block;
+      float: none;
       div{
         background: grey;
         margin: 15% 25% ;

@@ -2,7 +2,6 @@
   font-family: "Existence";
   src: url(../fonts/existence/existence-light.woff);
 }
-
 body {
   font-family: Existence, Serif;
 }
@@ -169,16 +168,13 @@ a {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 header {
   background: grey;
   background-image: url("../img/header_bg.jpg");
@@ -412,6 +408,8 @@ header .slideDownButton:hover img {
 }
 #team .membersList .member {
   position: relative;
+  display: inline-block;
+  float: none;
 }
 #team .membersList .member div {
   background: grey;
@@ -521,3 +519,5 @@ header .slideDownButton:hover img {
   color: white;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=style.css.map */
