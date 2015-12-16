@@ -410,6 +410,7 @@ header .slideDownButton:hover img {
   position: relative;
   display: inline-block;
   float: none;
+  right: 33.33%;
 }
 #team .membersList .member div {
   background: grey;

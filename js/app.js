@@ -56,15 +56,15 @@ $(document).ready(function(){
         var leftButton = $("#teamButtonLeft");
         var rightButton = $("#teamButtonRight");
         var membersList = $(".membersList").eq(0);
-        var animationOffsetRight = { right: "33.33%"};
-        var animationOffsetLeft = { right: "-33.33%"};
+        var animationOffsetRight = { right: "66.67%"};
+        var animationOffsetLeft = { right: "0"};
         var numberOfElements = membersList.children().length;
         var animationTime = 200;
 
         rightButton.on("click", function(){
             for(var i = 0; i < numberOfElements; i++){
                 membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(i){
-                    membersList.children().css("right","0");
+                    membersList.children().css("right","33.33%");
                 });
             }
             membersList.children().promise().done(function(){
@@ -75,7 +75,7 @@ $(document).ready(function(){
         leftButton.on("click", function(){
             for(var i = 0; i < numberOfElements; i++){
                 membersList.children().eq(i).animate(animationOffsetLeft, animationTime, function(){
-                    membersList.children().css("right","0");
+                    membersList.children().css("right","33.33%");
                 });
             }
             membersList.children().promise().done(function() {
