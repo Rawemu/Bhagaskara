@@ -1,25 +1,37 @@
 #team{
   .teamButtons{
-    #teamButtonLeft,
-    #teamButtonRight{
+    #teamButtonLeftLi,
+    #teamButtonRightLi{
       width: 50%;
       min-height: 46px;
       background-position: left;
       background-size: auto 100%;
       background-repeat: no-repeat;
+      //noinspection CssUnknownTarget
       background-image: url("../img/hexagon_slider_button.png");
+
+      #teamButtonLeft,
+      #teamButtonRight{
+        max-width: 40px;
+        cursor: pointer;
+      }
+
       img{
         margin: 10px 15px 0 15px;
       }
 
     }
 
-    #teamButtonLeft{
+    #teamButtonLeftLi{
       background-position: right;
       text-align: right;
+      #teamButtonLeft{
+        float: right;
+        margin-right: 5px;
+      }
     }
 
-    #teamButtonRight{
+    #teamButtonRightLi{
       text-align: left;
       img {
         transform: rotate(180deg);

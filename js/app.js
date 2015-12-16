@@ -7,6 +7,7 @@ $(document).ready(function(){
     stickyMenuWithSlideDownEffect();
     hamburgerMenu();
     checkMenuOnResize();
+    teamSlider();
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
@@ -52,7 +53,38 @@ $(document).ready(function(){
                 menu.children().show();
                 hamb.hide();
             }
+        });
+    }
 
+    function teamSlider(){
+        var leftButton = $("#teamButtonLeft");
+        var rightButton = $("#teamButtonRight");
+        var membersList = $(".membersList").eq(0);
+        var currentMember = membersList.children().eq(1);
+        var numberOfElements = membersList.children().length;
+
+        rightButton.on("click", function(){
+            currentMember.prev().toggleClass("hidden");
+            membersList.children().first().appendTo(membersList);
+            currentMember = currentMember.next();
+            if(currentMember.next().length !== 0) {
+                currentMember.next().toggleClass("hidden");
+            }
+            else{
+                membersList.children().eq(0).toggleClass("hidden");
+            }
+        });
+
+        leftButton.on("click", function(){
+            currentMember.next().toggleClass("hidden");
+            membersList.children().last().prependTo(membersList);
+            currentMember = currentMember.prev();
+            if(currentMember.prev().length !== 0) {
+                currentMember.prev().toggleClass("hidden");
+            }
+            else{
+                membersList.children().eq(0).toggleClass("hidden");
+            }
         });
     }
 

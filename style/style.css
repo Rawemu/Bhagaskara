@@ -304,7 +304,7 @@ header .slideDownButton:hover img {
   top: 0;
   left: 0;
   display: none;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .underMenu {
@@ -370,8 +370,8 @@ header .slideDownButton:hover img {
   font-size: 3em;
 }
 
-#team .teamButtons #teamButtonLeft,
-#team .teamButtons #teamButtonRight {
+#team .teamButtons #teamButtonLeftLi,
+#team .teamButtons #teamButtonRightLi {
   width: 50%;
   min-height: 46px;
   background-position: left;
@@ -379,18 +379,29 @@ header .slideDownButton:hover img {
   background-repeat: no-repeat;
   background-image: url("../img/hexagon_slider_button.png");
 }
-#team .teamButtons #teamButtonLeft img,
-#team .teamButtons #teamButtonRight img {
+#team .teamButtons #teamButtonLeftLi #teamButtonLeft,
+#team .teamButtons #teamButtonLeftLi #teamButtonRight,
+#team .teamButtons #teamButtonRightLi #teamButtonLeft,
+#team .teamButtons #teamButtonRightLi #teamButtonRight {
+  max-width: 40px;
+  cursor: pointer;
+}
+#team .teamButtons #teamButtonLeftLi img,
+#team .teamButtons #teamButtonRightLi img {
   margin: 10px 15px 0 15px;
 }
-#team .teamButtons #teamButtonLeft {
+#team .teamButtons #teamButtonLeftLi {
   background-position: right;
   text-align: right;
 }
-#team .teamButtons #teamButtonRight {
+#team .teamButtons #teamButtonLeftLi #teamButtonLeft {
+  float: right;
+  margin-right: 5px;
+}
+#team .teamButtons #teamButtonRightLi {
   text-align: left;
 }
-#team .teamButtons #teamButtonRight img {
+#team .teamButtons #teamButtonRightLi img {
   transform: rotate(180deg);
 }
 #team .membersList {
