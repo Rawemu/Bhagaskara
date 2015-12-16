@@ -6,13 +6,15 @@ $(document).ready(function(){
 
     stickyMenuWithSlideDownEffect();
     hamburgerMenu();
+    checkMenuOnResize();
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
         var menuOffsetFromTop = menu.position().top;
+        var offsetDelay = 1.05;
 
         $(window).on("scroll", function () {
-            if ($(window).scrollTop() > 1.05 * menuOffsetFromTop) {
+            if ($(window).scrollTop() > offsetDelay * menuOffsetFromTop) {
                 menu.addClass("sticky");
                 menu.slideDown(1000);
             }
@@ -26,10 +28,32 @@ $(document).ready(function(){
     function hamburgerMenu() {
         var menu = $(".innerMenu").eq(0);
 
-        if ($(window).width() < 900) {
-            menu.on("click", function () {
+        menu.on("click", function () {
+            var winSize = $(window).width();
+
+            if (winSize < 900) {
                 menu.children().toggle();
-            });
-        }
+            }
+        });
+
     }
+
+    function checkMenuOnResize(){
+        $(window).resize(function(){
+            var menu = $(".innerMenu").eq(0);
+            var winSize = $(window).width();
+            var hamb = $("#hamburger");
+
+            if(winSize < 900){
+                menu.children().hide();
+                hamb.show();
+            }
+            else{
+                menu.children().show();
+                hamb.hide();
+            }
+
+        });
+    }
+
 });
