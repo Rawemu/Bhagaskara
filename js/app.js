@@ -62,21 +62,25 @@ $(document).ready(function(){
         var animationTime = 200;
 
         rightButton.on("click", function(){
-            membersList.children().first().appendTo(membersList);
             for(var i = 0; i < numberOfElements; i++){
-                membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(){
+                membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(i){
                     membersList.children().css("right","0");
                 });
             }
+            membersList.children().promise().done(function(){
+                membersList.children().first().appendTo(membersList);
+            });
         });
 
         leftButton.on("click", function(){
-            membersList.children().last().prependTo(membersList);
             for(var i = 0; i < numberOfElements; i++){
                 membersList.children().eq(i).animate(animationOffsetLeft, animationTime, function(){
                     membersList.children().css("right","0");
                 });
             }
+            membersList.children().promise().done(function() {
+                membersList.children().last().prependTo(membersList);
+            });
         });
     }
 
