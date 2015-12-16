@@ -42,7 +42,7 @@ a{
       width: 100%/$end * $i;
       float: left;
       box-sizing: border-box;
-      border: 1px solid transparent;
+      border: 1px solid red;
     }
   }
 }
@@ -50,7 +50,7 @@ a{
 @media only screen and (max-width: 899px) {
   $end: 6;
   @for $i from 1 through $end {
-    .col-#{$i} {
+    .mcol-#{$i} {
       width: 100%/$end * $i;
       float: left;
       box-sizing: border-box;
@@ -210,16 +210,35 @@ header{
   }
 
   .innerMenu {
+    @media only screen and (max-width: 899px){
+      transform: rotate(180deg);
+    }
+
     li {
-      display: block;
       float: right;
+      text-align: center;
+
+      @media only screen and (max-width: 899px){
+        float: none;
+        transform: rotate(-180deg);
+        display:none;
+        text-align: right;
+      }
+
       font-size: 0.7em;
       line-height: 3em;
-      text-align: center;
+
       text-transform: uppercase;
       margin: 1em 5px;
       span {
         color: purple;
+      }
+    }
+
+    #hamburger{
+      @media only screen and (max-width: 899px){
+        display: block;
+        cursor: pointer;
       }
     }
   }
@@ -312,13 +331,19 @@ header{
     #teamButtonLeft,
     #teamButtonRight{
       width: 50%;
-      background-position: center;
+      min-height: 46px;
+      background-position: left;
       background-size: auto 100%;
       background-repeat: no-repeat;
-      background-image: url("../img/hexagon_small.png");
+      background-image: url("../img/hexagon_slider_button.png");
+      img{
+        margin: 10px 15px 0 15px;
+      }
+
     }
 
     #teamButtonLeft{
+      background-position: right;
       text-align: right;
     }
 
@@ -348,6 +373,10 @@ header{
       }
     }
   }
+}
+
+.hidden{
+  display: none;
 }
 
 #skills{

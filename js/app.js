@@ -4,8 +4,10 @@
 
 $(document).ready(function(){
 
-    function stickyMenu() {
-        var stickyStarts = false;
+    stickyMenuWithSlideDownEffect();
+    hamburgerMenu();
+
+    function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
         var menuOffsetFromTop = menu.position().top;
 
@@ -21,7 +23,13 @@ $(document).ready(function(){
         });
     }
 
+    function hamburgerMenu() {
+        var menu = $(".innerMenu").eq(0);
 
-
-    stickyMenu();
+        if ($(window).width() < 900) {
+            menu.on("click", function () {
+                menu.children().toggle();
+            });
+        }
+    }
 });
