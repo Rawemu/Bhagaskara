@@ -1,0 +1,29 @@
+#about{
+  .screensPic{
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .besidePic {
+    padding: 5px;
+
+    p {
+      padding: 5px;
+      line-height: 2em;
+    }
+
+    .learnMoreButton {
+      max-width: 150px;
+      margin-left: 2%;
+      padding: 5%;
+      display: block;
+      font-weight: 800;
+      text-align: center;
+      color: white;
+      background: purple;
+      box-shadow: 0 5px #600060;
+      border-radius: 5%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.row{
+  width: 100%;
+  &:before,
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  $end: 12;
+  @for $i from 1 through $end {
+    .col-#{$i} {
+      width: 100%/$end * $i;
+      float: left;
+      box-sizing: border-box;
+      border: 1px solid red;
+    }
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  $end: 6;
+  @for $i from 1 through $end {
+    .mcol-#{$i} {
+      width: 100%/$end * $i;
+      float: left;
+      box-sizing: border-box;
+      border: 1px solid red;
+    }
+  }
+}
+
+.container{
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.marginSetter{
+  padding: 5% 0;
+}

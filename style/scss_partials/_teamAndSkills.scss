@@ -1,0 +1,70 @@
+#team{
+  .teamButtons{
+    #teamButtonLeft,
+    #teamButtonRight{
+      width: 50%;
+      min-height: 46px;
+      background-position: left;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-image: url("../img/hexagon_slider_button.png");
+      img{
+        margin: 10px 15px 0 15px;
+      }
+
+    }
+
+    #teamButtonLeft{
+      background-position: right;
+      text-align: right;
+    }
+
+    #teamButtonRight{
+      text-align: left;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .membersList{
+    text-align: center;
+    .member{
+
+      div{
+        background: grey;
+        margin: 15% 25% ;
+        width: 50%;
+        height: 150px;
+        border-radius: 50%;
+      }
+
+      .memberName{
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+#skills{
+  .skillsList{
+    margin: 5% 0;
+    .skill{
+      padding: 5%;
+
+      h2{
+        text-transform: uppercase;
+      }
+
+      span{
+        float: right;
+      }
+
+      .skillMeter{
+        height: 10px;
+        background: lightgrey;
+      }
+    }
+  }
+}

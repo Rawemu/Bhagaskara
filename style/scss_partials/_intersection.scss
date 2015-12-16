@@ -1,0 +1,21 @@
+.intersection{
+  background-image: url("../img/middle_bg.jpg");
+  background-position: center;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  text-align: center;
+
+  .intersectionImage{
+    background-image: url("../img/hexagon.png");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding: 5%;
+  }
+}
+
+.textOn2ndBackground{
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
