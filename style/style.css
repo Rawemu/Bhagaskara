@@ -423,11 +423,14 @@ header .slideDownButton:hover img {
   font-weight: 700;
 }
 
+#skills {
+  padding-bottom: 5%;
+}
 #skills .skillsList {
-  margin: 5% 0;
+  margin: 3% 0;
 }
 #skills .skillsList .skill {
-  padding: 5%;
+  padding: 3%;
 }
 #skills .skillsList .skill h2 {
   text-transform: uppercase;
