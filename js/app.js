@@ -3,7 +3,7 @@ $(document).ready(function(){
     stickyMenuWithSlideDownEffect();
     hamburgerMenu();
     checkMenuOnResize();
-    teamSlider();
+    teamSliderWithSkillsSetInit();
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
@@ -52,7 +52,7 @@ $(document).ready(function(){
         });
     }
 
-    function teamSlider(){
+    function teamSliderWithSkillsSetInit(){
         var leftButton = $("#teamButtonLeft");
         var rightButton = $("#teamButtonRight");
         var membersList = $(".membersList").eq(0);
@@ -63,7 +63,7 @@ $(document).ready(function(){
         var animationTime = 200;
         var winSize = $(window).width();
 
-        skillsSetterForCurrentMember();
+        skillsSet();
 
         rightButton.on("click", function(){
             for(var i = 0; i < numberOfElements; i++){
@@ -77,7 +77,7 @@ $(document).ready(function(){
             }
             membersList.children().promise().done(function(){
                 membersList.children().first().appendTo(membersList);
-                skillsSetterForCurrentMember();
+                skillsSet();
             });
         });
 
@@ -93,36 +93,22 @@ $(document).ready(function(){
             }
             membersList.children().promise().done(function() {
                 membersList.children().last().prependTo(membersList);
-                skillsSetterForCurrentMember();
+                skillsSet();
             });
         });
     }
 
-    function skillsSetterForCurrentMember(){
-        var buttonLeft = $("#teamButtonLeft");
-        var buttonRight = $("#teamButtonRight");
-
-        skillSet();
-
-        buttonRight.on("click", function(){
-            skillSet();
-        });
-        buttonLeft.on("click", function(){
-            skillSet();
-        });
-
-        function skillSet(){
-            var skills = $(".skill");
-            var dataName = ["webdesign", "gfxdesign", "htmlcss", "uiux"];
-            var skillMeter = $(".skillMeter");
-            var value = 0;
-            var animationTime = 200;
-            var currentMember = $(".member").eq(2);
-            for(var i = 0; i < skills.length; i++) {
-                value = currentMember.data(dataName[i]);
-                skills.eq(i).children().eq(0).children().eq(0).html(value);
-                skillMeter.eq(i).children().eq(0).animate({ width: value }, animationTime);
-            }
+    function skillsSet(){
+        var skills = $(".skill");
+        var dataName = ["webdesign", "gfxdesign", "htmlcss", "uiux"];
+        var skillMeter = $(".skillMeter");
+        var value = 0;
+        var animationTime = 200;
+        var currentMember = $(".member").eq(2);
+        for(var i = 0; i < skills.length; i++) {
+            value = currentMember.data(dataName[i]);
+            skills.eq(i).children().eq(0).children().eq(0).html(value);
+            skillMeter.eq(i).children().eq(0).animate({ width: value }, animationTime);
         }
     }
 });
