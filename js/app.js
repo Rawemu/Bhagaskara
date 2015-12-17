@@ -71,6 +71,7 @@ $(document).ready(function(){
                     animationOffsetRight = { right: "200%"};
                     sliderReset = "100%"
                 }
+
                 membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(){
                     membersList.children().css("right", sliderReset);
                 });
@@ -87,6 +88,7 @@ $(document).ready(function(){
                     animationOffsetRight = { right: "0%"};
                     sliderReset = "100%"
                 }
+
                 membersList.children().eq(i).animate(animationOffsetLeft, animationTime, function(){
                     membersList.children().css("right", sliderReset);
                 });
@@ -105,6 +107,7 @@ $(document).ready(function(){
         var value = 0;
         var animationTime = 200;
         var currentMember = $(".member").eq(2);
+
         for(var i = 0; i < skills.length; i++) {
             value = currentMember.data(dataName[i]);
             skills.eq(i).children().eq(0).children().eq(0).html(value);
