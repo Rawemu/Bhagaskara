@@ -3,6 +3,7 @@ $(document).ready(function(){
     stickyMenuWithSlideDownEffect();
     hamburgerMenu();
     checkMenuOnResize();
+    skillsSetterForCurrentMember();
     teamSlider();
 
     function stickyMenuWithSlideDownEffect() {
@@ -94,4 +95,26 @@ $(document).ready(function(){
         });
     }
 
+    function skillsSetterForCurrentMember(){
+        var currentMember = $(".member").eq(2);
+        var buttonLeft = $("#teamButtonLeft");
+        var buttonRight = $("#teamButtonRight");
+
+        skillSet();
+
+        buttonRight.on("click", function(){
+            skillSet();
+        });
+        buttonLeft.on("click", function(){
+            skillSet();
+        });
+
+        function skillSet(){
+            var skills = $(".skill");
+            var dataName = ["webdesign", "gfxdesign", "htmlcss", "uiux"];
+            for(var i = 0; i < skills.length; i++) {
+                skills.eq(i).children().eq(0).children().eq(0).html(currentMember.data(dataName[i]));
+            }
+        }
+    }
 });
