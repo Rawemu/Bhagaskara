@@ -117,42 +117,42 @@ a {
     width: 16.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-2 {
     width: 33.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-3 {
     width: 50%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-4 {
     width: 66.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-5 {
     width: 83.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-6 {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 }
 .container {
@@ -441,12 +441,6 @@ header .slideDownButton:hover img {
   font-weight: 700;
 }
 
-#skills {
-  padding-bottom: 5%;
-}
-#skills .skillsList {
-  margin: 3% 0;
-}
 #skills .skillsList .skill {
   padding: 3%;
 }
@@ -534,7 +528,7 @@ header .slideDownButton:hover img {
 
 #citationsSlider {
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
 }
 #citationsSlider li {
@@ -563,6 +557,178 @@ header .slideDownButton:hover img {
 }
 #citationsSlider li .citationAuthor {
   text-transform: uppercase;
+}
+
+@keyframes circlesAni-0 {
+  0% {
+    background: white;
+  }
+
+  1% {
+    background: purple;
+  }
+
+  11.66667% {
+    background: purple;
+  }
+
+  12.66667% {
+    background: white;
+  }
+}
+
+#circle-0:after,
+#circle-0:before {
+  animation-name: circlesAni-0;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circlesAni-1 {
+  16.66667% {
+    background: white;
+  }
+
+  17.66667% {
+    background: purple;
+  }
+
+  28.33333% {
+    background: purple;
+  }
+
+  29.33333% {
+    background: white;
+  }
+}
+
+#circle-1:after,
+#circle-1:before {
+  animation-name: circlesAni-1;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circlesAni-2 {
+  33.33333% {
+    background: white;
+  }
+
+  34.33333% {
+    background: purple;
+  }
+
+  45% {
+    background: purple;
+  }
+
+  46% {
+    background: white;
+  }
+}
+
+#circle-2:after,
+#circle-2:before {
+  animation-name: circlesAni-2;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circlesAni-3 {
+  50% {
+    background: white;
+  }
+
+  51% {
+    background: purple;
+  }
+
+  61.66667% {
+    background: purple;
+  }
+
+  62.66667% {
+    background: white;
+  }
+}
+
+#circle-3:after,
+#circle-3:before {
+  animation-name: circlesAni-3;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circlesAni-4 {
+  66.66667% {
+    background: white;
+  }
+
+  67.66667% {
+    background: purple;
+  }
+
+  78.33333% {
+    background: purple;
+  }
+
+  79.33333% {
+    background: white;
+  }
+}
+
+#circle-4:after,
+#circle-4:before {
+  animation-name: circlesAni-4;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circlesAni-5 {
+  83.33333% {
+    background: white;
+  }
+
+  84.33333% {
+    background: purple;
+  }
+
+  95% {
+    background: purple;
+  }
+
+  96% {
+    background: white;
+  }
+}
+
+#circle-5:after,
+#circle-5:before {
+  animation-name: circlesAni-5;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+.circles {
+  text-align: center;
+}
+.circles li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background: purple;
+  position: relative;
+}
+.circles li:after, .circles li:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  margin-top: 2px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background: white;
 }
 
 .headers {

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagaskara</title>
     <link type="text/css" rel="stylesheet" href="style/style.css" />
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
@@ -22,8 +23,6 @@
                 <li class="mcol-2 col-2 loweredLi"><a href="#team"><img src="img/user.png"/></a></li>
                 <li class="mcol-2 col-2 uppedLi"><a href="#preServicesText"><img src="img/bubble.png"/></a></li>
                 <li class="mcol-2 col-2 uppedLi"><a href="#portfolio"><img src="img/photo.png"/></a></li>
-                <!--<li class="col-2 loweredLi"><img src="img/bubble.png"/></li>-->
-                <!--<li class="col-2 loweredLi"><img src="img/photo.png"/></li>-->
                 <li class="mcol-2 col-2 loweredLi"><img src="img/pen.png"/></li>
                 <li class="mcol-2 col-2 loweredLi"><img src="img/paperplane.png"/></li>
             </ul>
@@ -97,45 +96,48 @@
     </div>
 </div>
 
-<section class="row marginSetter" id="team">
-    <div class="container">
-        <h1 class="mcol-6 col-12 headers"><span class="headersText">Our <span>team</span></span></h1>
-        <div class="mcol-6 col-12">
-            <ul class="mcol-6 col-12 teamButtons">
-                <li class="mcol-3 col-6" id="teamButtonLeftLi">
-                    <div id="teamButtonLeft"><img src="img/arrow_purple.png"></div>
-                </li>
-                <li class="mcol-3 col-6"  id="teamButtonRightLi">
-                    <div id="teamButtonRight"><img src="img/arrow_purple.png"></div></li>
+<section class="marginSetter">
+    <section class="row" id="team">
+        <div class="container">
+            <h1 class="mcol-6 col-12 headers"><span class="headersText">Our <span>team</span></span></h1>
+            <div class="mcol-6 col-12">
+                <ul class="mcol-6 col-12 teamButtons">
+                    <li class="mcol-3 col-6" id="teamButtonLeftLi">
+                        <div id="teamButtonLeft"><img src="img/arrow_purple.png"></div>
+                    </li>
+                    <li class="mcol-3 col-6"  id="teamButtonRightLi">
+                        <div id="teamButtonRight"><img src="img/arrow_purple.png"></div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="col-12 membersList row">
+                <li class="mcol-6 col-4 member" data-webdesign="90%" data-gfxdesign="35%" data-htmlcss="42%" data-uiux="5%">
+                    <div></div><p class="memberName">Julius Caesar</p><p>CEO</p></li>
+                <li class="mcol-6 col-4 member" data-webdesign="78%" data-gfxdesign="50%" data-htmlcss="34%" data-uiux="55%">
+                    <div></div><p class="memberName">Octavian Augustus</p><p>Board member</p></li>
+                <li class="mcol-6 col-4 member" data-webdesign="65%" data-gfxdesign="96%" data-htmlcss="76%" data-uiux="25%">
+                    <div></div><p class="memberName">Marcus Aurelius</p><p>Board member</p></li>
+                <li class="mcol-6 col-4 member" data-webdesign="81%" data-gfXdesign="68%" data-htmlcss="39%" data-uiux="55%">
+                    <div></div><p class="memberName">Maximus Vodkas</p><p>IT consultant</p></li>
+                <li class="mcol-6 col-4 member" data-webdesign="95%" data-gfxdesign="95%" data-htmlcss="92%" data-uiux="0%">
+                    <div></div><p class="memberName">Brutus Caesar</p><p>Project manager</p></li>
+                <li class="mcol-6 col-4 member" data-webdesign="31%" data-gfxdesign="41%" data-htmlcss="25%" data-uiux="95%">
+                    <div></div><p class="memberName">Pompeius Totalus</p><p>Senior programmer</p></li>
             </ul>
         </div>
-        <ul class="col-12 membersList row">
-            <li class="mcol-6 col-4 member" data-webdesign="90%" data-gfxdesign="35%" data-htmlcss="42%" data-uiux="5%">
-                <div></div><p class="memberName">Julius Caesar</p><p>CEO</p></li>
-            <li class="mcol-6 col-4 member" data-webdesign="78%" data-gfxdesign="50%" data-htmlcss="34%" data-uiux="55%">
-                <div></div><p class="memberName">Octavian Augustus</p><p>Board member</p></li>
-            <li class="mcol-6 col-4 member" data-webdesign="65%" data-gfxdesign="96%" data-htmlcss="76%" data-uiux="25%">
-                <div></div><p class="memberName">Marcus Aurelius</p><p>Board member</p></li>
-            <li class="mcol-6 col-4 member" data-webdesign="81%" data-gfXdesign="68%" data-htmlcss="39%" data-uiux="55%">
-                <div></div><p class="memberName">Maximus Vodkas</p><p>IT consultant</p></li>
-            <li class="mcol-6 col-4 member" data-webdesign="95%" data-gfxdesign="95%" data-htmlcss="92%" data-uiux="0%">
-                <div></div><p class="memberName">Brutus Caesar</p><p>Project manager</p></li>
-            <li class="mcol-6 col-4 member" data-webdesign="31%" data-gfxdesign="41%" data-htmlcss="25%" data-uiux="95%">
-                <div></div><p class="memberName">Pompeius Totalus</p><p>Senior programmer</p></li>
-        </ul>
-    </div>
-</section>
+    </section>
 
-<section class="row" id="skills">
-    <div class="container">
-        <h1 class="mcol-6 col-12 headers"><span class="headersText">Our <span>skills</span></span></h1>
-        <ul class="mcol-6 col-12 skillsList">
-            <li class="mcol-6 col-6 skill"><h2>Web design<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
-            <li class="mcol-6 col-6 skill"><h2>Graphic design<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
-            <li class="mcol-6 col-6 skill"><h2>html/css<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
-            <li class="mcol-6 col-6 skill"><h2>ui/ux<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
-        </ul>
-    </div>
+    <section class="row" id="skills">
+        <div class="container">
+            <h1 class="mcol-6 col-12 headers"><span class="headersText">Our <span>skills</span></span></h1>
+            <ul class="mcol-6 col-12 skillsList">
+                <li class="mcol-6 col-6 skill"><h2>Web design<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
+                <li class="mcol-6 col-6 skill"><h2>Graphic design<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
+                <li class="mcol-6 col-6 skill"><h2>html/css<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
+                <li class="mcol-6 col-6 skill"><h2>ui/ux<span>90%</span></h2><div class="skillMeter"><div></div></div></li>
+            </ul>
+        </div>
+    </section>
 </section>
 
 <div class="row intersection marginSetter" id="preServicesText">
@@ -167,8 +169,13 @@
             <li class="mcol-6 col-12"><div class="citationAuthorPic"></div><p class="citation"><span>In laoreet hac, rhoncus massa, vivamus interdum volutpat diam, donec viverra pellentesque.</span></p>
                 <p class="citationAuthor">Name Lastname</p></li>
         </ul>
-        <ul class="circles">
-            <li></li>
+        <ul class="mcol-6 col-12 circles">
+            <li id="circle-0"></li>
+            <li id="circle-1"></li>
+            <li id="circle-2"></li>
+            <li id="circle-3"></li>
+            <li id="circle-4"></li>
+            <li id="circle-5"></li>
         </ul>
     </div>
 </section>

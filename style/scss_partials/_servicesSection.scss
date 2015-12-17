@@ -33,7 +33,7 @@ $numberOfCitations: 6;
 
 #citationsSlider{
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
 
   li {
@@ -64,6 +64,54 @@ $numberOfCitations: 6;
 
     .citationAuthor {
       text-transform: uppercase;
+    }
+  }
+}
+
+@for $i from 0 to $numberOfCitations {
+  @keyframes circlesAni-#{$i} {
+    #{100% /$numberOfCitations * $i}{
+      background: white;
+    }
+    #{(100% / $numberOfCitations * $i) + 1%}{
+      background: purple;
+    }
+    #{(100% / $numberOfCitations * ($i + 1)) - 5%}{
+      background: purple;
+    }
+    #{(100% / $numberOfCitations * ($i + 1)) - 4%}{
+      background: white;
+    }
+  }
+
+  #circle-#{$i}:after,
+  #circle-#{$i}:before{
+    animation-name: circlesAni-#{$i};
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.circles{
+  text-align: center;
+  li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: purple;
+    position: relative;
+
+    &:after,
+    &:before{
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      margin-top: 2px;
+      margin-left: -3px;
+      border-radius: 50%;
+      background: white;
     }
   }
 }
