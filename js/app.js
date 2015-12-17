@@ -7,11 +7,11 @@ $(document).ready(function(){
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
-        var menuOffsetFromTop = menu.position().top;
-        var offsetDelay = 1.05;
+        var menuOffsetFromTop = menu.offset().top;
+        var offsetCompensator = 1.2;
 
         $(window).on("scroll", function () {
-            if ($(window).scrollTop() > offsetDelay * menuOffsetFromTop) {
+            if ($(window).scrollTop() > offsetCompensator * menuOffsetFromTop) {
                 menu.addClass("sticky");
                 menu.slideDown(1000);
             }
