@@ -40,47 +40,6 @@
   }
 }
 
-.hidden{
-  display: none;
-}
-
-#services{
-  .servicesStats{
-    text-align: center;
-
-    .statsValue{
-      font-size: 4em;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    .statsDescription{
-      font-size: 1em;
-    }
-  }
-}
-
-#citationsSlider{
-  text-align: center;
-
-  .citationAuthorPic{
-    background: grey;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
-
-  .citation{
-    span{
-      max-width: 500px;
-    }
-  }
-
-  .citationAuthor{
-    text-transform: uppercase;
-  }
-}
-
 .portfolioButtons{
   padding: 0 32%;
   li {
