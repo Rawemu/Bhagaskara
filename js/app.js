@@ -3,7 +3,6 @@ $(document).ready(function(){
     stickyMenuWithSlideDownEffect();
     hamburgerMenu();
     checkMenuOnResize();
-    skillsSetterForCurrentMember();
     teamSlider();
 
     function stickyMenuWithSlideDownEffect() {
@@ -64,6 +63,8 @@ $(document).ready(function(){
         var animationTime = 200;
         var winSize = $(window).width();
 
+        skillsSetterForCurrentMember();
+
         rightButton.on("click", function(){
             for(var i = 0; i < numberOfElements; i++){
                 if(winSize < 900){
@@ -76,6 +77,7 @@ $(document).ready(function(){
             }
             membersList.children().promise().done(function(){
                 membersList.children().first().appendTo(membersList);
+                skillsSetterForCurrentMember();
             });
         });
 
@@ -91,12 +93,12 @@ $(document).ready(function(){
             }
             membersList.children().promise().done(function() {
                 membersList.children().last().prependTo(membersList);
+                skillsSetterForCurrentMember();
             });
         });
     }
 
     function skillsSetterForCurrentMember(){
-        var currentMember = $(".member").eq(2);
         var buttonLeft = $("#teamButtonLeft");
         var buttonRight = $("#teamButtonRight");
 
@@ -112,8 +114,14 @@ $(document).ready(function(){
         function skillSet(){
             var skills = $(".skill");
             var dataName = ["webdesign", "gfxdesign", "htmlcss", "uiux"];
+            var skillMeter = $(".skillMeter");
+            var value = 0;
+            var animationTime = 200;
+            var currentMember = $(".member").eq(2);
             for(var i = 0; i < skills.length; i++) {
-                skills.eq(i).children().eq(0).children().eq(0).html(currentMember.data(dataName[i]));
+                value = currentMember.data(dataName[i]);
+                skills.eq(i).children().eq(0).children().eq(0).html(value);
+                skillMeter.eq(i).children().eq(0).animate({ width: value }, animationTime);
             }
         }
     }

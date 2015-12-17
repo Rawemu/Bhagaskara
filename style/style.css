@@ -2,6 +2,7 @@
   font-family: "Existence";
   src: url(../fonts/existence/existence-light.woff);
 }
+
 body {
   font-family: Existence, Serif;
 }
@@ -168,13 +169,16 @@ a {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 header {
   background: grey;
   background-image: url("../img/header_bg.jpg");
@@ -451,6 +455,11 @@ header .slideDownButton:hover img {
   height: 10px;
   background: lightgrey;
 }
+#skills .skillsList .skill .skillMeter div {
+  width: 0;
+  height: 100%;
+  background: purple;
+}
 
 .headers {
   font-size: 2em;
@@ -531,5 +540,3 @@ header .slideDownButton:hover img {
   color: white;
   cursor: pointer;
 }
-
-/*# sourceMappingURL=style.css.map */
