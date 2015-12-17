@@ -1,3 +1,20 @@
+$numberOfCitations: 6;
+
+@keyframes slider {
+  @for $i from 0 to $numberOfCitations {
+    #{100% / $numberOfCitations * $i} {
+      right: ($i * 100.5%);
+    }
+    #{(100% / $numberOfCitations * ($i + 1)) - 5%}{
+      right: ($i * 100.5%);
+    }
+  }
+  100%{
+    right: 0;
+  }
+}
+
+
 #services{
   .servicesStats{
     text-align: center;
@@ -16,21 +33,37 @@
 
 #citationsSlider{
   text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
 
-  .citationAuthorPic{
-    background: grey;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
+  li {
+    white-space: normal;
+    float: none;
+    display: inline-block;
+    position: relative;
+    animation-name: slider;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
 
-  .citation{
-    span{
-      max-width: 500px;
+    .citationAuthorPic {
+      margin: 0 auto;
+      background: grey;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
     }
-  }
 
-  .citationAuthor{
-    text-transform: uppercase;
+    .citation {
+      text-align: center;
+      span {
+        margin: 0 auto;
+        display: block;
+        max-width: 600px;
+      }
+    }
+
+    .citationAuthor {
+      text-transform: uppercase;
+    }
   }
 }

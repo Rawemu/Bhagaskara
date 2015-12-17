@@ -32,84 +32,84 @@ a {
     width: 8.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-2 {
     width: 16.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-3 {
     width: 25%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-4 {
     width: 33.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-5 {
     width: 41.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-6 {
     width: 50%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-7 {
     width: 58.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-8 {
     width: 66.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-9 {
     width: 75%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-10 {
     width: 83.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-11 {
     width: 91.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-12 {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 }
 @media only screen and (max-width: 899px) {
@@ -466,6 +466,60 @@ header .slideDownButton:hover img {
   background: purple;
 }
 
+@keyframes slider {
+  0% {
+    right: 0%;
+  }
+
+  11.66667% {
+    right: 0%;
+  }
+
+  16.66667% {
+    right: 100.5%;
+  }
+
+  28.33333% {
+    right: 100.5%;
+  }
+
+  33.33333% {
+    right: 201%;
+  }
+
+  45% {
+    right: 201%;
+  }
+
+  50% {
+    right: 301.5%;
+  }
+
+  61.66667% {
+    right: 301.5%;
+  }
+
+  66.66667% {
+    right: 402%;
+  }
+
+  78.33333% {
+    right: 402%;
+  }
+
+  83.33333% {
+    right: 502.5%;
+  }
+
+  95% {
+    right: 502.5%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
 #services .servicesStats {
   text-align: center;
 }
@@ -480,17 +534,34 @@ header .slideDownButton:hover img {
 
 #citationsSlider {
   text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
-#citationsSlider .citationAuthorPic {
+#citationsSlider li {
+  white-space: normal;
+  float: none;
+  display: inline-block;
+  position: relative;
+  animation-name: slider;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+#citationsSlider li .citationAuthorPic {
+  margin: 0 auto;
   background: grey;
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
-#citationsSlider .citation span {
-  max-width: 500px;
+#citationsSlider li .citation {
+  text-align: center;
 }
-#citationsSlider .citationAuthor {
+#citationsSlider li .citation span {
+  margin: 0 auto;
+  display: block;
+  max-width: 600px;
+}
+#citationsSlider li .citationAuthor {
   text-transform: uppercase;
 }
 
