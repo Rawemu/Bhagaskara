@@ -191,7 +191,7 @@ a {
   margin: 0 auto;
 }
 
-.marginSetter {
+.paddingSetter {
   padding: 5% 0;
 }
 
@@ -830,4 +830,8 @@ p {
 .address,
 .contactPhone {
   font-weight: 700;
+}
+
+#footerLogo {
+  text-align: center;
 }
