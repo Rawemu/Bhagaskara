@@ -794,7 +794,7 @@ header .slideDownButton:hover img {
   cursor: pointer;
 }
 
-p {
+#contact p {
   margin: 2em 0;
   font-family: Arial, Serif;
 }
