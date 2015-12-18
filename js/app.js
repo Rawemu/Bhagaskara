@@ -42,26 +42,18 @@ $(document).ready(function(){
             var hamb = $("#hamburger");
 
             var membersList = $(".membersList").eq(0);
-            var sliderReset;
-            var seenMember;
 
             if(winSize < 900){
                 menu.children().hide();
                 hamb.show();
-
-                sliderReset = "100%";
-                seenMember = 1;
             }
             else{
                 menu.children().show();
                 hamb.hide();
-
-                sliderReset = "33.33%";
-                seenMember = 2;
             }
 
-            membersList.children().css("right", sliderReset);
-            skillsSet(seenMember);
+            membersList.children().css("right", getSliderReset());
+            skillsSet(getSeenMember());
         });
     }
 
@@ -72,66 +64,41 @@ $(document).ready(function(){
         var numberOfElements = membersList.children().length;
         var animationTime = 200;
         var animationOffsetLeft = { right: "0%"};
-        var winSize = $(window).width();
 
-        var sliderReset;
-        var animationOffsetRight;
-        var seenMember;
-
-        if(winSize < 900){
-            seenMember = 1;
-        }
-        else{
-            seenMember = 2;
-        }
-
-        skillsSet(seenMember);
+        skillsSet(getSeenMember());
 
         rightButton.on("click", function(){
             var winSize = $(window).width();
+            var animationOffsetRight;
 
             if(winSize < 900){
                 animationOffsetRight = { right: "200%"};
-                sliderReset = "100%";
-                seenMember = 1;
             }
             else{
                 animationOffsetRight = { right: "66.67%"};
-                sliderReset = "33.33%";
-                seenMember = 2;
             }
 
             for(var i = 0; i < numberOfElements; i++){
                 membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(){
-                    membersList.children().css("right", sliderReset);
+                    membersList.children().css("right", getSliderReset());
                 });
             }
             membersList.children().promise().done(function(){
                 membersList.children().first().appendTo(membersList);
-                skillsSet(seenMember);
+                skillsSet(getSeenMember());
             });
         });
 
         leftButton.on("click", function(){
-            var winSize = $(window).width();
-
-            if(winSize < 900){
-                sliderReset = "100%";
-                seenMember = 1;
-            }
-            else{
-                sliderReset = "33.33%";
-                seenMember = 2;
-            }
 
             for(var i = 0; i < numberOfElements; i++){
                 membersList.children().eq(i).animate(animationOffsetLeft, animationTime, function(){
-                    membersList.children().css("right", sliderReset);
+                    membersList.children().css("right", getSliderReset());
                 });
             }
             membersList.children().promise().done(function() {
                 membersList.children().last().prependTo(membersList);
-                skillsSet(seenMember);
+                skillsSet(getSeenMember());
             });
         });
     }
@@ -149,5 +116,33 @@ $(document).ready(function(){
             skills.eq(i).children().eq(0).children().eq(0).html(value);
             skillMeter.eq(i).children().eq(0).animate({ width: value }, animationTime);
         }
+    }
+
+    function getSeenMember(){
+        var seenMember;
+        var winSize = $(window).width();
+
+        if(winSize < 900){
+            seenMember = 1;
+        }
+        else{
+            seenMember = 2;
+        }
+
+        return seenMember;
+    }
+
+    function getSliderReset(){
+        var winSize = $(window).width();
+        var sliderReset;
+
+        if(winSize < 900){
+            sliderReset = "100%";
+        }
+        else{
+            sliderReset = "33.33%";
+        }
+
+        return sliderReset;
     }
 });
