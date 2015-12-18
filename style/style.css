@@ -813,6 +813,16 @@ p {
   min-height: 10em;
 }
 
+#submitInput {
+  margin: 0 1em;
+  padding: 1.4em 3.5em;
+  box-shadow: 0 5px #600060;
+  border-radius: 5%;
+  background: purple;
+  color: white;
+  border: 0;
+}
+
 .contactText {
   padding: 0 5%;
 }
