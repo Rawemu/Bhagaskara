@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     stickyMenuWithSlideDownEffect();
     hamburgerMenu();
-    checkMenuOnResize();
+    checkMenuAndSliderOnResize();
     teamSliderWithSkillsSetInit();
 
     function stickyMenuWithSlideDownEffect() {
@@ -35,20 +35,33 @@ $(document).ready(function(){
 
     }
 
-    function checkMenuOnResize(){
+    function checkMenuAndSliderOnResize(){
         $(window).resize(function(){
             var menu = $(".innerMenu").eq(0);
             var winSize = $(window).width();
             var hamb = $("#hamburger");
 
+            var membersList = $(".membersList").eq(0);
+            var sliderReset;
+            var seenMember;
+
             if(winSize < 900){
                 menu.children().hide();
                 hamb.show();
+
+                sliderReset = "100%";
+                seenMember = 1;
             }
             else{
                 menu.children().show();
                 hamb.hide();
+
+                sliderReset = "33.33%";
+                seenMember = 2;
             }
+
+            membersList.children().css("right", sliderReset);
+            skillsSet(seenMember);
         });
     }
 
@@ -56,57 +69,80 @@ $(document).ready(function(){
         var leftButton = $("#teamButtonLeft");
         var rightButton = $("#teamButtonRight");
         var membersList = $(".membersList").eq(0);
-        var animationOffsetRight = { right: "66.67%"};
-        var animationOffsetLeft = { right: "0"};
         var numberOfElements = membersList.children().length;
-        var sliderReset = "33.33%";
         var animationTime = 200;
+        var animationOffsetLeft = { right: "0%"};
         var winSize = $(window).width();
 
-        skillsSet();
+        var sliderReset;
+        var animationOffsetRight;
+        var seenMember;
+
+        if(winSize < 900){
+            seenMember = 1;
+        }
+        else{
+            seenMember = 2;
+        }
+
+        skillsSet(seenMember);
 
         rightButton.on("click", function(){
-            for(var i = 0; i < numberOfElements; i++){
-                if(winSize < 900){
-                    animationOffsetRight = { right: "200%"};
-                    sliderReset = "100%"
-                }
+            var winSize = $(window).width();
 
+            if(winSize < 900){
+                animationOffsetRight = { right: "200%"};
+                sliderReset = "100%";
+                seenMember = 1;
+            }
+            else{
+                animationOffsetRight = { right: "66.67%"};
+                sliderReset = "33.33%";
+                seenMember = 2;
+            }
+
+            for(var i = 0; i < numberOfElements; i++){
                 membersList.children().eq(i).animate(animationOffsetRight, animationTime, function(){
                     membersList.children().css("right", sliderReset);
                 });
             }
             membersList.children().promise().done(function(){
                 membersList.children().first().appendTo(membersList);
-                skillsSet();
+                skillsSet(seenMember);
             });
         });
 
         leftButton.on("click", function(){
-            for(var i = 0; i < numberOfElements; i++){
-                if(winSize < 900){
-                    animationOffsetRight = { right: "0%"};
-                    sliderReset = "100%"
-                }
+            var winSize = $(window).width();
 
+            if(winSize < 900){
+                sliderReset = "100%";
+                seenMember = 1;
+            }
+            else{
+                sliderReset = "33.33%";
+                seenMember = 2;
+            }
+
+            for(var i = 0; i < numberOfElements; i++){
                 membersList.children().eq(i).animate(animationOffsetLeft, animationTime, function(){
                     membersList.children().css("right", sliderReset);
                 });
             }
             membersList.children().promise().done(function() {
                 membersList.children().last().prependTo(membersList);
-                skillsSet();
+                skillsSet(seenMember);
             });
         });
     }
 
-    function skillsSet(){
+    function skillsSet(seenMember){
         var skills = $(".skill");
         var dataName = ["webdesign", "gfxdesign", "htmlcss", "uiux"];
         var skillMeter = $(".skillMeter");
         var value = 0;
         var animationTime = 200;
-        var currentMember = $(".member").eq(2);
+        var currentMember = $(".member").eq(seenMember);
 
         for(var i = 0; i < skills.length; i++) {
             value = currentMember.data(dataName[i]);
