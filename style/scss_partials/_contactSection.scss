@@ -1,0 +1,34 @@
+p{
+  margin: 2em 0;
+  font-family: Arial, Serif;
+}
+
+#nameInput,
+#emailInput,
+#messageInput {
+  font-size: 12pt;
+  padding: 0.5em;
+  margin: 0 1em;
+  width: 90%;
+  font-family: Arial, Serif;
+}
+
+#messageInput {
+  min-height: 10em;
+}
+
+#submitInput{
+    
+}
+
+.contactText {
+  padding: 0 5%;
+}
+
+.address,
+.contactPhone{
+  font-weight: 700;
+}
+
+
+

@@ -24,7 +24,7 @@
                 <li class="mcol-2 col-2 uppedLi"><a href="#preServicesText"><img src="img/bubble.png"/></a></li>
                 <li class="mcol-2 col-2 uppedLi"><a href="#portfolio"><img src="img/photo.png"/></a></li>
                 <li class="mcol-2 col-2 loweredLi"><img src="img/pen.png"/></li>
-                <li class="mcol-2 col-2 loweredLi"><img src="img/paperplane.png"/></li>
+                <li class="mcol-2 col-2 loweredLi"><a href="#contact"><img src="img/paperplane.png"/></a></li>
             </ul>
         </div>
         <div class="mcol-6 col-12"><div class="slideDownButton"><a href="#menu"><img src="img/arrow_down.png"></a></div></div>
@@ -36,7 +36,7 @@
         <div class="mcol-6 col-12">
             <h1 class="logoMenu mcol-1 col-2"><a href="#"><img src="img/bhagaskara_menu_logo.png"/></a></h1>
             <ul class="innerMenu mcol-5 col-10">
-                <li class="col-1"><a href="#">contact</a></li>
+                <li class="col-1"><a href="#contact">contact</a></li>
                 <li class="col-1"><a href="#">blog</a></li>
                 <li class="col-1"><a href="#portfolio">portfolio</a></li>
                 <li class="col-1"><a href="#preServicesText">services</a></li>
@@ -183,22 +183,44 @@
 <section class="row marginSetter" id="portfolio">
     <div class="container">
         <h1 class="mcol-6 col-12 headers"><span class="headersText">Our <span>portfolio</span></span></h1>
-        <ul class="mcol-6 col-12 portfolioButtons">
-            <li id="#allButton"><span>all</span></li>
-            <li id="#webButton"><span>web</span></li>
-            <li id="#appsButton"><span>apps</span></li>
-            <li id="#iconsButton"><span>icons</span></li>
-        </ul>
+        <div>
+            <ul class="mcol-6 col-12 portfolioButtons">
+                <li class="mcol-1 col-3" id="#allButton"><span>all</span></li>
+                <li class="mcol-1 col-3" id="#webButton"><span>web</span></li>
+                <li class="mcol-1 col-3" id="#appsButton"><span>apps</span></li>
+                <li class="mcol-1 col-3" id="#iconsButton"><span>icons</span></li>
+            </ul>
+        </div>
         <div></div>
         <div></div>
     </div>
 </section>
 
-<section class="row">
-    <h1></h1>
-    <form></form>
-    <div><p></p><p></p><p></p></div>
+<section class="row marginSetter" id="contact">
+    <div class="container">
+        <h1 class="mcol-6 col-12 headers"><span class="headersText">Get <span>in touch</span></span></h1>
+        <form class="mcol-6 col-6">
+            <input id="nameInput" title="Name" type="text" placeholder="Your Name"/>
+            <br><br>
+            <input id="emailInput" title="email" type="email" placeholder="Your Email"/>
+            <br><br>
+            <textarea id="messageInput" title="message" placeholder="Your Message"></textarea>
+            <br><br>
+            <input id="submitInput" type="submit">
+        </form>
+        <div class="mcol-6 col-6 contactText">
+            <p>Ea his tation ubique. Ad viderer nostrum incorrupte has. Latine debitis repudiare id eum. In has habemus dissentias, soluta iisque mei no. In etiam vivendo persequeris mea, habeo doming cum ut, primis fierent eam an. Ne per albucius omittantur, nisl vocent tractatos has no.</p>
+            <p class="address">1600 Pennsylvania Ave NW, Washington,<br>DC 20500, United States of America.</p>
+            <p class="contactPhone">T:(202) 456-1111<br>M:(202) 456-1212</p>
+        </div>
+        <ul class="socialMediaLinks">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </section>
+
 <footer class="row"></footer>
 </body>
 </html>

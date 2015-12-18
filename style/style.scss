@@ -7,55 +7,6 @@
 @import "scss_partials/intersection";
 @import "scss_partials/teamAndSkills";
 @import "scss_partials/servicesSection";
+@import "scss_partials/portfolioSection";
+@import "scss_partials/contactSection";
 
-.headers{
-  font-size: 2em;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  .headersText {
-    span {
-      color: purple;
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      margin-left: -40px;
-      margin-top: 40px;
-      border-bottom: 2px solid purple;
-      border-left: 2px solid purple;
-    }
-    &:after{
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      margin-left: 20px;
-      margin-top: -20px;
-      border-top: 2px solid purple;
-      border-right: 2px solid purple;
-    }
-  }
-}
-
-.portfolioButtons{
-  padding: 0 32%;
-  li {
-    padding: 2%;
-    margin: 5% 2%;
-    float: left;
-    width: 40px;
-    height: 20px;
-    text-align: center;
-    border: 1px solid purple;
-
-    &:hover {
-      background: purple;
-      color: white;
-      cursor: pointer;
-    }
-  }
-}

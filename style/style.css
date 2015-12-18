@@ -18,6 +18,36 @@ a {
   color: inherit;
 }
 
+.headers {
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.headers .headersText span {
+  color: purple;
+}
+.headers .headersText:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: -40px;
+  margin-top: 40px;
+  border-bottom: 2px solid purple;
+  border-left: 2px solid purple;
+}
+.headers .headersText:after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+  margin-top: -20px;
+  border-top: 2px solid purple;
+  border-right: 2px solid purple;
+}
+
 .row {
   width: 100%;
 }
@@ -32,84 +62,84 @@ a {
     width: 8.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-2 {
     width: 16.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-3 {
     width: 25%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-4 {
     width: 33.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-5 {
     width: 41.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-6 {
     width: 50%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-7 {
     width: 58.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-8 {
     width: 66.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-9 {
     width: 75%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-10 {
     width: 83.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-11 {
     width: 91.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .col-12 {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 }
 @media only screen and (max-width: 899px) {
@@ -117,42 +147,42 @@ a {
     width: 16.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .mcol-2 {
     width: 33.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .mcol-3 {
     width: 50%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .mcol-4 {
     width: 66.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .mcol-5 {
     width: 83.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 
   .mcol-6 {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid red;
   }
 }
 .container {
@@ -731,45 +761,30 @@ header .slideDownButton:hover img {
   background: white;
 }
 
-.headers {
-  font-size: 2em;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+@media only screen and (min-width: 900px) {
+  .portfolioButtons {
+    padding: 0 39%;
+  }
 }
-.headers .headersText span {
-  color: purple;
+@media only screen and (min-width: 700px) and (max-width: 899px) {
+  .portfolioButtons {
+    padding: 0 32%;
+  }
 }
-.headers .headersText:before {
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  margin-left: -40px;
-  margin-top: 40px;
-  border-bottom: 2px solid purple;
-  border-left: 2px solid purple;
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+  .portfolioButtons {
+    padding: 0 20%;
+  }
 }
-.headers .headersText:after {
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  margin-left: 20px;
-  margin-top: -20px;
-  border-top: 2px solid purple;
-  border-right: 2px solid purple;
-}
-
-.portfolioButtons {
-  padding: 0 32%;
+@media only screen and (max-width: 499px) {
+  .portfolioButtons {
+    padding: 0 10%;
+  }
 }
 .portfolioButtons li {
-  padding: 2%;
-  margin: 5% 2%;
-  float: left;
-  width: 40px;
-  height: 20px;
+  margin: 1% 2%;
+  max-width: 21%;
+  padding: 3% 0;
   text-align: center;
   border: 1px solid purple;
 }
@@ -777,4 +792,32 @@ header .slideDownButton:hover img {
   background: purple;
   color: white;
   cursor: pointer;
+}
+
+p {
+  margin: 2em 0;
+  font-family: Arial, Serif;
+}
+
+#nameInput,
+#emailInput,
+#messageInput {
+  font-size: 12pt;
+  padding: 0.5em;
+  margin: 0 1em;
+  width: 90%;
+  font-family: Arial, Serif;
+}
+
+#messageInput {
+  min-height: 10em;
+}
+
+.contactText {
+  padding: 0 5%;
+}
+
+.address,
+.contactPhone {
+  font-weight: 700;
 }
