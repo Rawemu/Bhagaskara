@@ -5,7 +5,7 @@ Project done during the CodersLab bootcamp using custom-made grid.
 Done with HTML5, Sass, javascript with jquery. NO other frameworks/libraries used.
 Still not finished.
 
-To do:
+#To do:
 - make corresponding citation show when dot is clicked
 - gallery (still not finished.
 - add random photos instead of grey circles (for better presentation)
