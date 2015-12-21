@@ -93,26 +93,32 @@ $numberOfCitations: 6;
   }
 }
 
-.circles{
-  text-align: center;
-  li {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    background: purple;
-    position: relative;
+.circlesDiv {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
 
-    &:before,
-    &:after{
-      content: "";
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      margin-top: 2px;
-      margin-left: -3px;
+  .circles {
+    width: 100%;
+
+    li {
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: white;
+      display: inline-block;
+      background: purple;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        margin-top: 2px;
+        margin-left: 2px;
+        border-radius: 50%;
+        background: white;
+      }
     }
   }
 }

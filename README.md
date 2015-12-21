@@ -6,7 +6,6 @@ Done with HTML5, Sass, javascript with jquery. NO other frameworks/libraries use
 Still not finished.
 
 To do:
-- redo dots in citations slider (dot are a bit off in IE11)
 - make corresponding citation show when dot is clicked
 - gallery (still not finished.
 - add random photos instead of grey circles (for better presentation)

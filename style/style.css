@@ -699,10 +699,15 @@ header .slideDownButton:hover img {
   animation-iteration-count: infinite;
 }
 
-.circles {
-  text-align: center;
+.circlesDiv {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
 }
-.circles li {
+.circlesDiv .circles {
+  width: 100%;
+}
+.circlesDiv .circles li {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -710,13 +715,13 @@ header .slideDownButton:hover img {
   background: purple;
   position: relative;
 }
-.circles li:before, .circles li:after {
+.circlesDiv .circles li:before {
   content: "";
   position: absolute;
   width: 6px;
   height: 6px;
   margin-top: 2px;
-  margin-left: -3px;
+  margin-left: 2px;
   border-radius: 50%;
   background: white;
 }
