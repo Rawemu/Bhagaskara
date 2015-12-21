@@ -3,10 +3,10 @@ $numberOfCitations: 6;
 @keyframes slider {
   @for $i from 0 to $numberOfCitations {
     #{100% / $numberOfCitations * $i} {
-      right: ($i * 100.5%);
+      right: ($i * 100%);
     }
     #{(100% / $numberOfCitations * ($i + 1)) - 5%}{
-      right: ($i * 100.5%);
+      right: ($i * 100%);
     }
   }
   100%{
@@ -55,6 +55,7 @@ $numberOfCitations: 6;
 
     .citation {
       text-align: center;
+      padding: 5px;
       span {
         margin: 0 auto;
         display: block;
@@ -102,8 +103,8 @@ $numberOfCitations: 6;
     background: purple;
     position: relative;
 
-    &:after,
-    &:before{
+    &:before,
+    &:after{
       content: "";
       position: absolute;
       width: 6px;

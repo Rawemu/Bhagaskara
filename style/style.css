@@ -2,7 +2,6 @@
   font-family: "Existence";
   src: url(../fonts/existence/existence-light.woff);
 }
-
 body {
   font-family: Existence, Serif;
 }
@@ -199,16 +198,13 @@ a {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 header {
   background: grey;
   background-image: url("../img/header_bg.jpg");
@@ -494,56 +490,43 @@ header .slideDownButton:hover img {
   0% {
     right: 0%;
   }
-
   11.66667% {
     right: 0%;
   }
-
   16.66667% {
-    right: 100.5%;
+    right: 100%;
   }
-
   28.33333% {
-    right: 100.5%;
+    right: 100%;
   }
-
   33.33333% {
-    right: 201%;
+    right: 200%;
   }
-
   45% {
-    right: 201%;
+    right: 200%;
   }
-
   50% {
-    right: 301.5%;
+    right: 300%;
   }
-
   61.66667% {
-    right: 301.5%;
+    right: 300%;
   }
-
   66.66667% {
-    right: 402%;
+    right: 400%;
   }
-
   78.33333% {
-    right: 402%;
+    right: 400%;
   }
-
   83.33333% {
-    right: 502.5%;
+    right: 500%;
   }
-
   95% {
-    right: 502.5%;
+    right: 500%;
   }
-
   100% {
     right: 0;
   }
 }
-
 #services .servicesStats {
   text-align: center;
 }
@@ -579,6 +562,7 @@ header .slideDownButton:hover img {
 }
 #citationsSlider li .citation {
   text-align: center;
+  padding: 5px;
 }
 #citationsSlider li .citation span {
   margin: 0 auto;
@@ -593,20 +577,16 @@ header .slideDownButton:hover img {
   0% {
     background: white;
   }
-
   1% {
     background: purple;
   }
-
   11.66667% {
     background: purple;
   }
-
   12.66667% {
     background: white;
   }
 }
-
 #circle-0:after,
 #circle-0:before {
   animation-name: circlesAni-0;
@@ -618,20 +598,16 @@ header .slideDownButton:hover img {
   16.66667% {
     background: white;
   }
-
   17.66667% {
     background: purple;
   }
-
   28.33333% {
     background: purple;
   }
-
   29.33333% {
     background: white;
   }
 }
-
 #circle-1:after,
 #circle-1:before {
   animation-name: circlesAni-1;
@@ -643,20 +619,16 @@ header .slideDownButton:hover img {
   33.33333% {
     background: white;
   }
-
   34.33333% {
     background: purple;
   }
-
   45% {
     background: purple;
   }
-
   46% {
     background: white;
   }
 }
-
 #circle-2:after,
 #circle-2:before {
   animation-name: circlesAni-2;
@@ -668,20 +640,16 @@ header .slideDownButton:hover img {
   50% {
     background: white;
   }
-
   51% {
     background: purple;
   }
-
   61.66667% {
     background: purple;
   }
-
   62.66667% {
     background: white;
   }
 }
-
 #circle-3:after,
 #circle-3:before {
   animation-name: circlesAni-3;
@@ -693,20 +661,16 @@ header .slideDownButton:hover img {
   66.66667% {
     background: white;
   }
-
   67.66667% {
     background: purple;
   }
-
   78.33333% {
     background: purple;
   }
-
   79.33333% {
     background: white;
   }
 }
-
 #circle-4:after,
 #circle-4:before {
   animation-name: circlesAni-4;
@@ -718,20 +682,16 @@ header .slideDownButton:hover img {
   83.33333% {
     background: white;
   }
-
   84.33333% {
     background: purple;
   }
-
   95% {
     background: purple;
   }
-
   96% {
     background: white;
   }
 }
-
 #circle-5:after,
 #circle-5:before {
   animation-name: circlesAni-5;
@@ -750,7 +710,7 @@ header .slideDownButton:hover img {
   background: purple;
   position: relative;
 }
-.circles li:after, .circles li:before {
+.circles li:before, .circles li:after {
   content: "";
   position: absolute;
   width: 6px;
@@ -835,3 +795,5 @@ header .slideDownButton:hover img {
 #footerLogo {
   text-align: center;
 }
+
+/*# sourceMappingURL=style.css.map */
