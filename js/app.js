@@ -4,7 +4,7 @@ $(document).ready(function(){
     hamburgerMenu();
     checkMenuAndSliderOnResize();
     teamSliderWithSkillsSetInit();
-    expandGallery();
+    galleryOrganizer();
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
@@ -147,16 +147,29 @@ $(document).ready(function(){
         return sliderReset;
     }
 
-    function expandGallery(){
+    function galleryOrganizer(){
+        var nextPictureToLoad = expandGallery(0);
+
+        var moreButton = $("#moreButton");
+
+        moreButton.on("click", function(){
+            nextPictureToLoad = expandGallery(nextPictureToLoad);
+        });
+    }
+
+    function expandGallery(beginLoadingFrom){
         var gallery = $("#gallery");
         var numberOfPicturesToLoad = 3;
+        var numberOfPictures = beginLoadingFrom + numberOfPicturesToLoad;
 
-        for(var i = 0; i < numberOfPicturesToLoad; i++){
+        for(var i = beginLoadingFrom; i < numberOfPictures; i++){
             var currentElementOfList = gallery.children().eq(i);
             var imgPath = currentElementOfList.data("imgurl");
             var newImage = $("<img src=" + imgPath + ">");
             newImage.prependTo(currentElementOfList);
             currentElementOfList.show();
         }
+
+        return i;
     }
 });
