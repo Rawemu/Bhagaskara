@@ -16,6 +16,8 @@ $numberOfCitations: 6;
 
 
 #services{
+  background: #e3e3e3;
+
   .servicesStats{
     text-align: center;
 
@@ -72,7 +74,7 @@ $numberOfCitations: 6;
 @for $i from 0 to $numberOfCitations {
   @keyframes circlesAni-#{$i} {
     #{100% /$numberOfCitations * $i}{
-      background: white;
+      background: #e3e3e3;
     }
     #{(100% / $numberOfCitations * $i) + 1%}{
       background: purple;
@@ -81,7 +83,7 @@ $numberOfCitations: 6;
       background: purple;
     }
     #{(100% / $numberOfCitations * ($i + 1)) - 4%}{
-      background: white;
+      background: #e3e3e3;
     }
   }
 
@@ -117,7 +119,7 @@ $numberOfCitations: 6;
         margin-top: 2px;
         margin-left: 2px;
         border-radius: 50%;
-        background: white;
+        background: #e3e3e3;
       }
     }
   }

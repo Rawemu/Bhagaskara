@@ -527,6 +527,9 @@ header .slideDownButton:hover img {
     right: 0;
   }
 }
+#services {
+  background: #e3e3e3;
+}
 #services .servicesStats {
   text-align: center;
 }
@@ -575,7 +578,7 @@ header .slideDownButton:hover img {
 
 @keyframes circlesAni-0 {
   0% {
-    background: white;
+    background: #e3e3e3;
   }
   1% {
     background: purple;
@@ -584,7 +587,7 @@ header .slideDownButton:hover img {
     background: purple;
   }
   12.66667% {
-    background: white;
+    background: #e3e3e3;
   }
 }
 #circle-0:after,
@@ -596,7 +599,7 @@ header .slideDownButton:hover img {
 
 @keyframes circlesAni-1 {
   16.66667% {
-    background: white;
+    background: #e3e3e3;
   }
   17.66667% {
     background: purple;
@@ -605,7 +608,7 @@ header .slideDownButton:hover img {
     background: purple;
   }
   29.33333% {
-    background: white;
+    background: #e3e3e3;
   }
 }
 #circle-1:after,
@@ -617,7 +620,7 @@ header .slideDownButton:hover img {
 
 @keyframes circlesAni-2 {
   33.33333% {
-    background: white;
+    background: #e3e3e3;
   }
   34.33333% {
     background: purple;
@@ -626,7 +629,7 @@ header .slideDownButton:hover img {
     background: purple;
   }
   46% {
-    background: white;
+    background: #e3e3e3;
   }
 }
 #circle-2:after,
@@ -638,7 +641,7 @@ header .slideDownButton:hover img {
 
 @keyframes circlesAni-3 {
   50% {
-    background: white;
+    background: #e3e3e3;
   }
   51% {
     background: purple;
@@ -647,7 +650,7 @@ header .slideDownButton:hover img {
     background: purple;
   }
   62.66667% {
-    background: white;
+    background: #e3e3e3;
   }
 }
 #circle-3:after,
@@ -659,7 +662,7 @@ header .slideDownButton:hover img {
 
 @keyframes circlesAni-4 {
   66.66667% {
-    background: white;
+    background: #e3e3e3;
   }
   67.66667% {
     background: purple;
@@ -668,7 +671,7 @@ header .slideDownButton:hover img {
     background: purple;
   }
   79.33333% {
-    background: white;
+    background: #e3e3e3;
   }
 }
 #circle-4:after,
@@ -680,7 +683,7 @@ header .slideDownButton:hover img {
 
 @keyframes circlesAni-5 {
   83.33333% {
-    background: white;
+    background: #e3e3e3;
   }
   84.33333% {
     background: purple;
@@ -689,7 +692,7 @@ header .slideDownButton:hover img {
     background: purple;
   }
   96% {
-    background: white;
+    background: #e3e3e3;
   }
 }
 #circle-5:after,
@@ -723,7 +726,7 @@ header .slideDownButton:hover img {
   margin-top: 2px;
   margin-left: 2px;
   border-radius: 50%;
-  background: white;
+  background: #e3e3e3;
 }
 
 @media only screen and (min-width: 900px) {
