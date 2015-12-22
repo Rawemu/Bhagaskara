@@ -11,6 +11,11 @@ $(document).ready(function(){
         var menuOffsetFromTop = menu.offset().top;
         var offsetCompensator = 1.2;
 
+        $(window).resize(function(){
+            var underMenu = $(".underMenu").eq(0);
+            menuOffsetFromTop = underMenu.offset().top;
+        });
+
         $(window).on("scroll", function () {
             if ($(window).scrollTop() > offsetCompensator * menuOffsetFromTop) {
                 menu.addClass("sticky");

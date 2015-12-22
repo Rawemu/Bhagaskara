@@ -61,84 +61,84 @@ a {
     width: 8.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-2 {
     width: 16.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-3 {
     width: 25%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-4 {
     width: 33.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-5 {
     width: 41.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-6 {
     width: 50%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-7 {
     width: 58.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-8 {
     width: 66.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-9 {
     width: 75%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-10 {
     width: 83.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-11 {
     width: 91.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .col-12 {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 }
 @media only screen and (max-width: 899px) {
@@ -146,42 +146,42 @@ a {
     width: 16.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-2 {
     width: 33.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-3 {
     width: 50%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-4 {
     width: 66.66667%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-5 {
     width: 83.33333%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 
   .mcol-6 {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid transparent;
   }
 }
 .container {
@@ -238,6 +238,11 @@ header li {
   border-radius: 50%;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  header li {
+    display: none;
+  }
+}
 header li img {
   margin: 0 auto;
   max-width: 100%;
@@ -259,13 +264,18 @@ header li:hover {
 }
 header .slideDownButton {
   max-width: 100px;
-  padding: 5% 0;
+  padding: 8% 0;
   background-image: url("../img/hexagon_small.png");
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
   margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  header .slideDownButton {
+    display: none;
+  }
 }
 header .slideDownButton img {
   max-width: 100%;

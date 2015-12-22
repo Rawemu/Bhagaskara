@@ -32,6 +32,10 @@ header{
   }
 
   li{
+    @media only screen and (max-width: 600px){
+      display: none;
+    }
+
     padding: 6% 0;
     background-image: url("../img/hexagon.png");
     background-size: 100% auto;
@@ -68,8 +72,12 @@ header{
   }
 
   .slideDownButton{
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+
     max-width: 100px;
-    padding: 5% 0;
+    padding: 8% 0;
     background-image: url("../img/hexagon_small.png");
     background-position: center;
     background-size: 100% auto;
