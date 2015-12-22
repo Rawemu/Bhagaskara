@@ -790,6 +790,10 @@ header .slideDownButton:hover img {
   text-align: center;
   font-family: Arial;
 }
+#gallery li img {
+  max-width: 100%;
+  height: auto;
+}
 #gallery li h2 {
   font-size: 16pt;
   font-weight: 400;
