@@ -152,8 +152,12 @@ $(document).ready(function(){
 
         var moreButton = $("#moreButton");
 
-        moreButton.on("click", function(){
+        moreButton.on("click", function(event){
             nextPictureToLoad = expandGallery(nextPictureToLoad);
+            if(nextPictureToLoad === -1){
+                moreButton.html("That's all!");
+                $(this).off(event);
+            }
         });
     }
 
@@ -164,10 +168,16 @@ $(document).ready(function(){
 
         for(var i = beginLoadingFrom; i < numberOfPictures; i++){
             var currentElementOfList = gallery.children().eq(i);
+
+            if(currentElementOfList.length === 0){
+                return -1;
+            }
+
             var imgPath = currentElementOfList.data("imgurl");
             var newImage = $("<img src=" + imgPath + ">");
             newImage.prependTo(currentElementOfList);
             currentElementOfList.show();
+
         }
 
         return i;
