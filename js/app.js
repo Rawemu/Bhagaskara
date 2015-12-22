@@ -156,6 +156,7 @@ $(document).ready(function(){
             var imgPath = currentElementOfList.data("imgurl");
             var newImage = $("<img src=" + imgPath + ">");
             newImage.prependTo(currentElementOfList);
+            currentElementOfList.show();
         }
     }
 });

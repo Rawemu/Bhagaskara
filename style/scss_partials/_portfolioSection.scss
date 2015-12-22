@@ -27,15 +27,43 @@
   }
 }
 
-#moreButton{
-  max-width: 100px;
+.moreButtonDiv {
   margin: 0 auto;
-  padding: 1.4em 3.5em;
-  font-weight: 800;
-  text-align: center;
-  color: white;
-  background: purple;
-  box-shadow: 0 5px #600060;
-  border-radius: 5%;
 
+  div{
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  #moreButton {
+    padding: 1.4em;
+    font-weight: 800;
+    display: block;
+    text-align: center;
+    color: white;
+    background: purple;
+    box-shadow: 0 5px #600060;
+    border-radius: 5%;
+  }
+}
+
+#gallery{
+  margin: 2em 0;
+
+  li {
+    display: none;
+    margin-top: 1em;
+    text-align: center;
+    font-family: Arial;
+
+    h2 {
+      font-size: 16pt;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+
+    p{
+      margin: 0;
+    }
+  }
 }
