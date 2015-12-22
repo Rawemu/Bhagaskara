@@ -4,6 +4,7 @@ $(document).ready(function(){
     hamburgerMenu();
     checkMenuAndSliderOnResize();
     teamSliderWithSkillsSetInit();
+    expandGallery();
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
@@ -144,5 +145,17 @@ $(document).ready(function(){
         }
 
         return sliderReset;
+    }
+
+    function expandGallery(){
+        var gallery = $("#gallery");
+        var numberOfPicturesToLoad = 3;
+
+        for(var i = 0; i < numberOfPicturesToLoad; i++){
+            var currentElementOfList = gallery.children().eq(i);
+            var imgPath = currentElementOfList.data("imgurl");
+            var newImage = $("<img src=" + imgPath + ">");
+            newImage.prependTo(currentElementOfList);
+        }
     }
 });
