@@ -771,6 +771,10 @@ header .slideDownButton:hover img {
   color: white;
   cursor: pointer;
 }
+.portfolioButtons #allButton {
+  background: purple;
+  color: white;
+}
 
 .moreButtonDiv {
   margin: 0 auto;

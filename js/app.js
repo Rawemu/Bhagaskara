@@ -154,8 +154,14 @@ $(document).ready(function(){
 
     function galleryOrganizer(){
         var nextPictureToLoad = expandGallery(0);
+        var tagChosen = "all";
 
         var moreButton = $("#moreButton");
+
+        var allButton = $("#allButton");
+        var webButton = $("#webButton");
+        var appsButton = $("#appsButton");
+        var iconsButton = $("#iconsButton");
 
         moreButton.on("click", function(event){
             nextPictureToLoad = expandGallery(nextPictureToLoad);
@@ -163,6 +169,24 @@ $(document).ready(function(){
                 moreButton.html("That's all!");
                 $(this).off(event);
             }
+            sortGalleryByTag(tagChosen, nextPictureToLoad);
+        });
+
+        allButton.on("click", function(){
+            tagChosen = "all";
+            sortGalleryByTag(tagChosen,nextPictureToLoad);
+        });
+        webButton.on("click", function(){
+            tagChosen = "web";
+            sortGalleryByTag(tagChosen,nextPictureToLoad);
+        });
+        appsButton.on("click", function(){
+            tagChosen = "apps";
+            sortGalleryByTag(tagChosen,nextPictureToLoad);
+        });
+        iconsButton.on("click",function(){
+            tagChosen = "icons";
+            sortGalleryByTag(tagChosen,nextPictureToLoad);
         });
     }
 
@@ -186,5 +210,39 @@ $(document).ready(function(){
         }
 
         return i;
+    }
+
+    function sortGalleryByTag(imgType, picturesLoaded){
+        var gallery = $("#gallery");
+
+        if(picturesLoaded === -1)
+        {
+            picturesLoaded = gallery.children().length;
+        }
+
+        if(imgType === "all"){
+            for(var i = 0; i < picturesLoaded; i++){
+                gallery.children().eq(i).show();
+            }
+        }
+        else{
+            for(var i = 0; i < picturesLoaded; i++){
+                var tags = gallery.children().eq(i).data("imgtype").split(" ");
+                var isTypeOfImgType = false;
+
+                for(var j = 0; j < tags.length; j++){
+                    if(tags[j] === imgType){
+                        isTypeOfImgType = true;
+                    }
+                }
+
+                if(isTypeOfImgType){
+                    gallery.children().eq(i).show();
+                }
+                else{
+                    gallery.children().eq(i).hide();
+                }
+            }
+        }
     }
 });
