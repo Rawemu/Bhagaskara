@@ -7,5 +7,4 @@ Still not finished.
 
 #To do:
 - make corresponding citation show when dot is clicked
-- js for buttons above gallery
 - add random photos instead of grey circles (for better presentation)

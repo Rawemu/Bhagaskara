@@ -206,7 +206,6 @@ $(document).ready(function(){
             var newImage = $("<img src=" + imgPath + ">");
             newImage.prependTo(currentElementOfList);
             currentElementOfList.show();
-
         }
 
         return i;
