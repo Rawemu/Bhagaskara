@@ -175,18 +175,22 @@ $(document).ready(function(){
         allButton.on("click", function(){
             tagChosen = "all";
             sortGalleryByTag(tagChosen,nextPictureToLoad);
+            galleryButtonColorChanger(allButton);
         });
         webButton.on("click", function(){
             tagChosen = "web";
             sortGalleryByTag(tagChosen,nextPictureToLoad);
+            galleryButtonColorChanger(webButton);
         });
         appsButton.on("click", function(){
             tagChosen = "apps";
             sortGalleryByTag(tagChosen,nextPictureToLoad);
+            galleryButtonColorChanger(appsButton);
         });
         iconsButton.on("click",function(){
             tagChosen = "icons";
             sortGalleryByTag(tagChosen,nextPictureToLoad);
+            galleryButtonColorChanger(iconsButton);
         });
     }
 
@@ -243,5 +247,12 @@ $(document).ready(function(){
                 }
             }
         }
+    }
+
+    function galleryButtonColorChanger(button){
+        button.css("color","white");
+        button.css("background-color","purple");
+        button.siblings().css("color","purple");
+        button.siblings().css("background-color","white");
     }
 });

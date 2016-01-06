@@ -767,8 +767,8 @@ header .slideDownButton:hover img {
   border: 1px solid purple;
 }
 .portfolioButtons li:hover {
-  background: purple;
-  color: white;
+  background: purple !important;
+  color: white !important;
   cursor: pointer;
 }
 .portfolioButtons #allButton {

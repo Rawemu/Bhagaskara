@@ -20,8 +20,8 @@
     border: 1px solid purple;
 
     &:hover {
-      background: purple;
-      color: white;
+      background: purple !important;
+      color: white !important;
       cursor: pointer;
     }
   }
