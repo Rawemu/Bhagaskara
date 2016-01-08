@@ -263,11 +263,21 @@ $(document).ready(function(){
 
         allCircles.on("click", function(){
             var activatedCircle = $(this);
-            var sliderAnimation = $("#citationsSlider").children();
+            var citations = $("#citationsSlider").children();
+            var circleIndex = activatedCircle.index();
 
             activatedCircle.removeClass("pseudo");
             circleList.removeClass("circlesAnimation");
-            sliderAnimation.removeClass("sliderAni");
+            citations.removeClass("sliderAni");
+
+            setCitationSliderToChosenCitation(circleIndex);
         });
+    }
+
+    function setCitationSliderToChosenCitation(circleIndex){
+        var citations = $("#citationsSlider").children();
+        var offsetvalue = circleIndex * 100 + "%";
+
+        citations.css("right", offsetvalue);
     }
 });
