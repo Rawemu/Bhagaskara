@@ -261,35 +261,71 @@ $(document).ready(function(){
         var circleList = $(".circles").eq(0);
         var allCircles = circleList.children();
 
+        var stateOfAnimation = { percOfAnimationDone: 0 };
+        var timeout = setTimeout(restartCitationSlider, 5000);
+
+        citationSliderTimer(stateOfAnimation);
+
         allCircles.on("click", function(){
-            var activatedCircle = $(this);
-            var citations = $("#citationsSlider").children();
-            var circleIndex = activatedCircle.index();
+            var circleIndex = $(this).index();
 
-            activatedCircle.removeClass("pseudo");
-            circleList.removeClass("circlesAnimation");
-            citations.removeClass("sliderAni");
+            clearTimeout(timeout);
 
-            setCitationSliderToChosenCitation(circleIndex);
+            timeout = setTimeout(restartCitationSlider, 5000);
+
+            setCitationSliderToDefault();
+            setDesiredCircle($(this));
+            setCitationSliderToChosenCitation(circleIndex, timeout);
         });
     }
 
-    function setCitationSliderToChosenCitation(circleIndex){
+    function setCitationSliderToChosenCitation(circleIndex, timeout){
         var citations = $("#citationsSlider").children();
         var offsetvalue = circleIndex * 100 + "%";
 
-        citations.animate({right: offsetvalue}, 1000, "swing", setTimeout(restart, 10000));
+        citations.animate({right: offsetvalue}, 1000, "swing", timeout);
+    }
 
-        function restart(){
-            var circleList = $(".circles").eq(0);
-            var allCircles = circleList.children();
+    function restartCitationSlider(){
+        var citations = $("#citationsSlider").children();
 
-            citations.animate({right: "0%"}, 1000);
-            citations.promise().done(function(){
-                circleList.addClass("circlesAnimation");
-                allCircles.addClass("pseudo");
-                citations.addClass("sliderAni");
-            });
+        citations.animate({right: "0%"}, 1000);
+        setCitationSliderToDefault();
+    }
+
+    function setDesiredCircle(activatedCircle){
+        var citations = $("#citationsSlider").children();
+        var circleList = $(".circles").eq(0);
+
+        activatedCircle.removeClass("pseudo");
+        circleList.removeClass("circlesAnimation");
+        citations.removeClass("sliderAni");
+    }
+
+    function setCitationSliderToDefault(){
+        var citations = $("#citationsSlider").children();
+        var circleList = $(".circles").eq(0);
+        var allCircles = circleList.children();
+
+        citations.promise().done(function(){
+            circleList.addClass("circlesAnimation");
+            allCircles.addClass("pseudo");
+            citations.addClass("sliderAni");
+        });
+    }
+
+    function citationSliderTimer(state){
+        var sliderAnimationDuration = parseInt($(".sliderAni").eq(0).css("animation-duration")); //in ms
+
+        window.setInterval(timer, sliderAnimationDuration * 10);
+
+        function timer(){
+            if(state.percOfAnimationDone < 100){
+                state.percOfAnimationDone++;
+            }
+            else{
+                state.percOfAnimationDone = 0;
+            }
         }
     }
 });

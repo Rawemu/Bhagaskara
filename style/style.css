@@ -559,7 +559,7 @@ header .slideDownButton:hover img {
 }
 #citationsSlider .sliderAni {
   animation-name: slider;
-  animation-duration: 24s;
+  animation-duration: 24000ms;
   animation-iteration-count: infinite;
 }
 #citationsSlider li {
