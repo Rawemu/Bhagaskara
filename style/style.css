@@ -727,6 +727,7 @@ header .slideDownButton:hover img {
   display: inline-block;
   background: purple;
   position: relative;
+  cursor: pointer;
 }
 .circlesDiv .circles li:before {
   content: "";

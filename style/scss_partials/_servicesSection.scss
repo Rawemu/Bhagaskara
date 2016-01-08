@@ -110,6 +110,7 @@ $numberOfCitations: 6;
       display: inline-block;
       background: purple;
       position: relative;
+      cursor: pointer;
 
       &:before {
         content: "";

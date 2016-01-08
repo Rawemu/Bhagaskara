@@ -4,6 +4,7 @@ $(document).ready(function(){
     hamburgerMenu();
     checkMenuAndSliderOnResize();
     teamSliderWithSkillsSetInit();
+    circlesInCitationSlider();
     galleryOrganizer();
 
     function stickyMenuWithSlideDownEffect() {
@@ -254,5 +255,18 @@ $(document).ready(function(){
         button.css("background-color","purple");
         button.siblings().css("color","purple");
         button.siblings().css("background-color","white");
+    }
+
+    function getCircle(){
+        var allCircles = $(".circles").eq(0).children();
+
+        allCircles.on("click", function(){
+            var chosenCircle = $(this);
+            console.log(chosenCircle);
+        });
+    }
+
+    function circlesInCitationSlider(){
+        var activatedCircle = getCircle();
     }
 });
