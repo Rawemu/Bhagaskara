@@ -557,14 +557,16 @@ header .slideDownButton:hover img {
   overflow-x: hidden;
   white-space: nowrap;
 }
+#citationsSlider .sliderAni {
+  animation-name: slider;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
 #citationsSlider li {
   white-space: normal;
   float: none;
   display: inline-block;
   position: relative;
-  animation-name: slider;
-  animation-duration: 24s;
-  animation-iteration-count: infinite;
 }
 #citationsSlider li .citationAuthorPic {
   margin: 0 auto;
@@ -600,8 +602,8 @@ header .slideDownButton:hover img {
     background: #e3e3e3;
   }
 }
-#circle-0:after,
-#circle-0:before {
+.circlesAnimation #circle-0:after,
+.circlesAnimation #circle-0:before {
   animation-name: circlesAni-0;
   animation-duration: 24s;
   animation-iteration-count: infinite;
@@ -621,8 +623,8 @@ header .slideDownButton:hover img {
     background: #e3e3e3;
   }
 }
-#circle-1:after,
-#circle-1:before {
+.circlesAnimation #circle-1:after,
+.circlesAnimation #circle-1:before {
   animation-name: circlesAni-1;
   animation-duration: 24s;
   animation-iteration-count: infinite;
@@ -642,8 +644,8 @@ header .slideDownButton:hover img {
     background: #e3e3e3;
   }
 }
-#circle-2:after,
-#circle-2:before {
+.circlesAnimation #circle-2:after,
+.circlesAnimation #circle-2:before {
   animation-name: circlesAni-2;
   animation-duration: 24s;
   animation-iteration-count: infinite;
@@ -663,8 +665,8 @@ header .slideDownButton:hover img {
     background: #e3e3e3;
   }
 }
-#circle-3:after,
-#circle-3:before {
+.circlesAnimation #circle-3:after,
+.circlesAnimation #circle-3:before {
   animation-name: circlesAni-3;
   animation-duration: 24s;
   animation-iteration-count: infinite;
@@ -684,8 +686,8 @@ header .slideDownButton:hover img {
     background: #e3e3e3;
   }
 }
-#circle-4:after,
-#circle-4:before {
+.circlesAnimation #circle-4:after,
+.circlesAnimation #circle-4:before {
   animation-name: circlesAni-4;
   animation-duration: 24s;
   animation-iteration-count: infinite;
@@ -705,8 +707,8 @@ header .slideDownButton:hover img {
     background: #e3e3e3;
   }
 }
-#circle-5:after,
-#circle-5:before {
+.circlesAnimation #circle-5:after,
+.circlesAnimation #circle-5:before {
   animation-name: circlesAni-5;
   animation-duration: 24s;
   animation-iteration-count: infinite;
@@ -729,7 +731,8 @@ header .slideDownButton:hover img {
   position: relative;
   cursor: pointer;
 }
-.circlesDiv .circles li:before {
+
+.pseudo:before {
   content: "";
   position: absolute;
   width: 6px;

@@ -257,16 +257,17 @@ $(document).ready(function(){
         button.siblings().css("background-color","white");
     }
 
-    function getCircle(){
-        var allCircles = $(".circles").eq(0).children();
+    function circlesInCitationSlider(){
+        var circleList = $(".circles").eq(0);
+        var allCircles = circleList.children();
 
         allCircles.on("click", function(){
-            var chosenCircle = $(this);
-            console.log(chosenCircle);
-        });
-    }
+            var activatedCircle = $(this);
+            var sliderAnimation = $("#citationsSlider").children();
 
-    function circlesInCitationSlider(){
-        var activatedCircle = getCircle();
+            activatedCircle.removeClass("pseudo");
+            circleList.removeClass("circlesAnimation");
+            sliderAnimation.removeClass("sliderAni");
+        });
     }
 });

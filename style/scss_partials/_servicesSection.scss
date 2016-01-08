@@ -38,14 +38,17 @@ $numberOfCitations: 6;
   overflow-x: hidden;
   white-space: nowrap;
 
+  .sliderAni{
+    animation-name: slider;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+  }
+
   li {
     white-space: normal;
     float: none;
     display: inline-block;
     position: relative;
-    animation-name: slider;
-    animation-duration: 24s;
-    animation-iteration-count: infinite;
 
     .citationAuthorPic {
       margin: 0 auto;
@@ -73,25 +76,26 @@ $numberOfCitations: 6;
 
 @for $i from 0 to $numberOfCitations {
   @keyframes circlesAni-#{$i} {
-    #{100% /$numberOfCitations * $i}{
+    #{100% /$numberOfCitations * $i} {
       background: #e3e3e3;
     }
-    #{(100% / $numberOfCitations * $i) + 1%}{
+    #{(100% / $numberOfCitations * $i) + 1%} {
       background: purple;
     }
-    #{(100% / $numberOfCitations * ($i + 1)) - 5%}{
+    #{(100% / $numberOfCitations * ($i + 1)) - 5%} {
       background: purple;
     }
-    #{(100% / $numberOfCitations * ($i + 1)) - 4%}{
+    #{(100% / $numberOfCitations * ($i + 1)) - 4%} {
       background: #e3e3e3;
     }
   }
-
-  #circle-#{$i}:after,
-  #circle-#{$i}:before{
-    animation-name: circlesAni-#{$i};
-    animation-duration: 24s;
-    animation-iteration-count: infinite;
+  .circlesAnimation {
+    #circle-#{$i}:after,
+    #circle-#{$i}:before {
+      animation-name: circlesAni-#{$i};
+      animation-duration: 24s;
+      animation-iteration-count: infinite;
+    }
   }
 }
 
@@ -112,16 +116,19 @@ $numberOfCitations: 6;
       position: relative;
       cursor: pointer;
 
-      &:before {
-        content: "";
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        margin-top: 2px;
-        margin-left: 2px;
-        border-radius: 50%;
-        background: #e3e3e3;
-      }
     }
+  }
+}
+
+.pseudo{
+  &:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    margin-top: 2px;
+    margin-left: 2px;
+    border-radius: 50%;
+    background: #e3e3e3;
   }
 }
