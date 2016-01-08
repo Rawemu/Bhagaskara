@@ -4,8 +4,8 @@ $(document).ready(function(){
     hamburgerMenu();
     checkMenuAndSliderOnResize();
     teamSliderWithSkillsSetInit();
-    circlesInCitationSlider();
     galleryOrganizer();
+    circlesInCitationSlider();
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
@@ -278,6 +278,18 @@ $(document).ready(function(){
         var citations = $("#citationsSlider").children();
         var offsetvalue = circleIndex * 100 + "%";
 
-        citations.css("right", offsetvalue);
+        citations.animate({right: offsetvalue}, 1000, "swing", setTimeout(restart, 10000));
+
+        function restart(){
+            var circleList = $(".circles").eq(0);
+            var allCircles = circleList.children();
+
+            citations.animate({right: "0%"}, 1000);
+            citations.promise().done(function(){
+                circleList.addClass("circlesAnimation");
+                allCircles.addClass("pseudo");
+                citations.addClass("sliderAni");
+            });
+        }
     }
 });
