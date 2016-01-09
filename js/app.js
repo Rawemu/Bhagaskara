@@ -354,7 +354,6 @@ $(document).ready(function(){
             else{
                 state.percOfAnimationDone = 0;
             }
-            console.log(state.percOfAnimationDone);
         }
     }
 
@@ -364,6 +363,7 @@ $(document).ready(function(){
             for (var j = 0; j < stylesheets[i].cssRules.length; ++j) {
                 if (stylesheets[i].cssRules[j].type == window.CSSRule.KEYFRAMES_RULE &&
                     stylesheets[i].cssRules[j].name == rule) {
+                    console.log(i + " " + j);
                     return stylesheets[i].cssRules[j]; }
             }
         }
@@ -374,9 +374,9 @@ $(document).ready(function(){
         var keyframes = getKeyframesRule("slider");
 
         for(var i = 0; i < keyframes.cssRules.length; i++){
-            var keyPerc = parseFloat(keyframes[i].keyText);
+            var keyPerc = parseFloat(keyframes.cssRules[i].cssText);
             if(stateOfAnimation.percOfAnimationDone >= keyPerc){
-                var text = keyframes[i].cssText;
+                var text = keyframes.cssRules[i].cssText;
                 var value = text.substring(text.lastIndexOf(":")+1,text.lastIndexOf("%"));
                 var currentCitation = parseFloat(value) + "%";
             }
