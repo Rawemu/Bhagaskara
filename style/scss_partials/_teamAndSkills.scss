@@ -24,17 +24,9 @@
 
     #teamButtonLeftLi{
       background-position: right;
-      text-align: right;
       #teamButtonLeft{
         float: right;
         margin-right: 5px;
-      }
-    }
-
-    #teamButtonRightLi{
-      text-align: left;
-      img {
-        transform: rotate(180deg);
       }
     }
   }

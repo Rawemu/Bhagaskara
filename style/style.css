@@ -433,17 +433,10 @@ header .slideDownButton:hover img {
 }
 #team .teamButtons #teamButtonLeftLi {
   background-position: right;
-  text-align: right;
 }
 #team .teamButtons #teamButtonLeftLi #teamButtonLeft {
   float: right;
   margin-right: 5px;
-}
-#team .teamButtons #teamButtonRightLi {
-  text-align: left;
-}
-#team .teamButtons #teamButtonRightLi img {
-  transform: rotate(180deg);
 }
 #team .membersList {
   text-align: center;
