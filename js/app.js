@@ -268,7 +268,6 @@ $(document).ready(function(){
 
         allCircles.on("click", function(){
             var circleIndex = $(this).index();
-            var citations = $("#citationsSlider").children();
 
             var currentCitation = getCurrentCitation(stateOfAnimation);
 
@@ -285,8 +284,6 @@ $(document).ready(function(){
     function setCitationSliderToChosenCitation(circleIndex, timeout, currentCitation){
         var citations = $("#citationsSlider").children();
         var desiredCitation = circleIndex * 100 + "%";
-
-        console.log(currentCitation);
 
         if(citations.css("animation-play-state") === "running"){
             citations.css("right", currentCitation);
@@ -363,7 +360,6 @@ $(document).ready(function(){
             for (var j = 0; j < stylesheets[i].cssRules.length; ++j) {
                 if (stylesheets[i].cssRules[j].type == window.CSSRule.KEYFRAMES_RULE &&
                     stylesheets[i].cssRules[j].name == rule) {
-                    console.log(i + " " + j);
                     return stylesheets[i].cssRules[j]; }
             }
         }
