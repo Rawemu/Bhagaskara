@@ -12,7 +12,7 @@ Gallery in "our portfolio" done with js/jquery.
 
 Note that button "blog" in menu should redirect to another page that was not included in this practice design, hence its not working.
 
-NOTE: When running from local drive using Chrome, chossing citation by clicking on dot doesn't work due to know security/bug issues, but works fine when chrome run through IDE (localhost:../)(tested on Webstorm).
+NOTE: When running from local drive using Chrome, chossing citation by clicking on dot doesn't work due to known security/bug issues, but works fine when chrome run through IDE (localhost:../)(tested on Webstorm).
 More info about above issue: https://code.google.com/p/chromium/issues/detail?id=49001 or https://code.google.com/p/chromium/issues/detail?id=45786
 
 #To do:
