@@ -275,7 +275,7 @@ $(document).ready(function(){
 
             timeout = setTimeout(restartCitationSlider, 5000);
 
-            forceSetCitationSliderValuesToDefault();
+            setCitationSliderValuesToDefault();
             setDesiredCircle($(this));
             setCitationSliderToChosenCitation(circleIndex, timeout, currentCitation);
         });
@@ -300,8 +300,8 @@ $(document).ready(function(){
         citations.animate({right: "0%"}, 1000);
         citations.promise().done(function(){
             citations.css("animation-play-state","running");
+            setCitationSliderValuesToDefault();
         });
-        setCitationSliderValuesToDefault();
     }
 
     function setDesiredCircle(activatedCircle){
@@ -313,7 +313,7 @@ $(document).ready(function(){
         citations.removeClass("sliderAni");
     }
 
-    function forceSetCitationSliderValuesToDefault(){
+    function setCitationSliderValuesToDefault(){
         var citations = $("#citationsSlider").children();
         var circleList = $(".circles").eq(0);
         var allCircles = circleList.children();
@@ -321,18 +321,6 @@ $(document).ready(function(){
         circleList.addClass("circlesAnimation");
         allCircles.addClass("pseudo");
         citations.addClass("sliderAni");
-    }
-
-    function setCitationSliderValuesToDefault(){
-        var citations = $("#citationsSlider").children();
-        var circleList = $(".circles").eq(0);
-        var allCircles = circleList.children();
-
-        citations.promise().done(function(){
-            circleList.addClass("circlesAnimation");
-            allCircles.addClass("pseudo");
-            citations.addClass("sliderAni");
-        });
     }
 
     function citationSliderTimer(state){
