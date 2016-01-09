@@ -5,7 +5,7 @@ $(document).ready(function(){
     checkMenuAndSliderOnResize();
     teamSliderWithSkillsSetInit();
     galleryOrganizer();
-    circlesInCitationSlider();
+    citationSliderOverride();
 
     function stickyMenuWithSlideDownEffect() {
         var menu = $("#menu");
@@ -257,7 +257,7 @@ $(document).ready(function(){
         button.siblings().css("background-color","white");
     }
 
-    function circlesInCitationSlider(){
+    function citationSliderOverride(){
         var circleList = $(".circles").eq(0);
         var allCircles = circleList.children();
 
@@ -268,29 +268,43 @@ $(document).ready(function(){
 
         allCircles.on("click", function(){
             var circleIndex = $(this).index();
+            var citations = $("#citationsSlider").children();
+
+            var currentCitation = getCurrentCitation(stateOfAnimation);
 
             clearTimeout(timeout);
 
             timeout = setTimeout(restartCitationSlider, 5000);
 
-            setCitationSliderToDefault();
+            forceSetCitationSliderValuesToDefault();
             setDesiredCircle($(this));
-            setCitationSliderToChosenCitation(circleIndex, timeout);
+            setCitationSliderToChosenCitation(circleIndex, timeout, currentCitation);
         });
     }
 
-    function setCitationSliderToChosenCitation(circleIndex, timeout){
+    function setCitationSliderToChosenCitation(circleIndex, timeout, currentCitation){
         var citations = $("#citationsSlider").children();
-        var offsetvalue = circleIndex * 100 + "%";
+        var desiredCitation = circleIndex * 100 + "%";
 
-        citations.animate({right: offsetvalue}, 1000, "swing", timeout);
+        console.log(currentCitation);
+
+        if(citations.css("animation-play-state") === "running"){
+            citations.css("right", currentCitation);
+        }
+
+        citations.css("animation-play-state","paused");
+
+        citations.animate({right: desiredCitation}, 1000, "swing", timeout);
     }
 
     function restartCitationSlider(){
         var citations = $("#citationsSlider").children();
 
         citations.animate({right: "0%"}, 1000);
-        setCitationSliderToDefault();
+        citations.promise().done(function(){
+            citations.css("animation-play-state","running");
+        });
+        setCitationSliderValuesToDefault();
     }
 
     function setDesiredCircle(activatedCircle){
@@ -302,7 +316,17 @@ $(document).ready(function(){
         citations.removeClass("sliderAni");
     }
 
-    function setCitationSliderToDefault(){
+    function forceSetCitationSliderValuesToDefault(){
+        var citations = $("#citationsSlider").children();
+        var circleList = $(".circles").eq(0);
+        var allCircles = circleList.children();
+
+        circleList.addClass("circlesAnimation");
+        allCircles.addClass("pseudo");
+        citations.addClass("sliderAni");
+    }
+
+    function setCitationSliderValuesToDefault(){
         var citations = $("#citationsSlider").children();
         var circleList = $(".circles").eq(0);
         var allCircles = circleList.children();
@@ -316,16 +340,51 @@ $(document).ready(function(){
 
     function citationSliderTimer(state){
         var sliderAnimationDuration = parseInt($(".sliderAni").eq(0).css("animation-duration")); //in ms
+        var citations = $("#citationsSlider").children();
 
         window.setInterval(timer, sliderAnimationDuration * 10);
 
         function timer(){
-            if(state.percOfAnimationDone < 100){
+            if(citations.css("animation-play-state") === "paused"){
+                state.percOfAnimationDone = 0;
+            }
+            else if(state.percOfAnimationDone < 100){
                 state.percOfAnimationDone++;
             }
             else{
                 state.percOfAnimationDone = 0;
             }
+            console.log(state.percOfAnimationDone);
         }
+    }
+
+    function getKeyframesRule(rule) {
+        var stylesheets = document.styleSheets;
+        for (var i = 0; i < stylesheets.length; ++i) {
+            for (var j = 0; j < stylesheets[i].cssRules.length; ++j) {
+                if (stylesheets[i].cssRules[j].type == window.CSSRule.KEYFRAMES_RULE &&
+                    stylesheets[i].cssRules[j].name == rule) {
+                    return stylesheets[i].cssRules[j]; }
+            }
+        }
+        return null;
+    }
+
+    function getCurrentCitation(stateOfAnimation){
+        var keyframes = getKeyframesRule("slider");
+
+        for(var i = 0; i < keyframes.cssRules.length; i++){
+            var keyPerc = parseFloat(keyframes[i].keyText);
+            if(stateOfAnimation.percOfAnimationDone >= keyPerc){
+                var text = keyframes[i].cssText;
+                var value = text.substring(text.lastIndexOf(":")+1,text.lastIndexOf("%"));
+                var currentCitation = parseFloat(value) + "%";
+            }
+            else{
+                break;
+            }
+        }
+
+        return currentCitation;
     }
 });
